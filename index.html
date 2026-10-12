@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,6 +41,9 @@ h1{font-size:clamp(42px,6vw,72px);line-height:1.08;letter-spacing:-2.5px;margin:
 .hero p{max-width:610px;color:#5d5d77;font-size:17px;margin-bottom:25px}
 .actions{display:flex;gap:12px;flex-wrap:wrap}
 .visual{min-height:350px;border-radius:30px;background:linear-gradient(145deg,#7048ff,#268bff 55%,#00bfc8);padding:25px;position:relative;box-shadow:0 25px 60px #7048ff30;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.visual:before,.visual:after{display:none}
+.visual{aspect-ratio:715/374;min-height:0;padding:0}
+.visual .float{display:none}
 .visual:before,.visual:after{content:"";position:absolute;border:1px solid #ffffff60;border-radius:50%}
 .visual:before{width:300px;height:300px}
 .visual:after{width:220px;height:220px}
@@ -72,6 +74,16 @@ h2{font-size:clamp(30px,4vw,44px);line-height:1.2;margin:8px 0 12px;letter-spaci
 .projects{background:linear-gradient(180deg,#f6f7ff,#eeebff)}
 .project{padding:0;overflow:hidden}
 .project-cover{min-height:155px;display:grid;place-items:center;font-size:42px;color:white;font-weight:900;letter-spacing:-1px}
+.project-video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#17172f}
+.project-body p{margin-top:4px}
+.visual img.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.visual:before,.visual:after{z-index:1}
+.float{z-index:2}
+.about-art.has-img{padding:0;overflow:hidden;position:relative;min-height:0;aspect-ratio:715/953;width:100%;max-width:420px;margin:auto}
+.about-art.has-img img{width:100%;height:100%;object-fit:cover;object-position:center top;position:absolute;inset:0}
+.about-art.has-img .cap{position:absolute;left:0;right:0;bottom:0;padding:60px 26px 24px;background:linear-gradient(transparent,#17172fd9);color:#fff}
+.about-art.has-img .cap strong{color:#fff;font-size:30px;display:block}
+.about-art.has-img .cap span{color:#e7e3ff;margin:0}
 .c1{background:linear-gradient(135deg,#7048ff,#ff4fa3)}
 .c2{background:linear-gradient(135deg,#00a9b7,#268bff)}
 .c3{background:linear-gradient(135deg,#ff9d32,#ff4f72)}
@@ -101,7 +113,7 @@ footer a{color:#d3c6ff}
  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
  .cards{grid-template-columns:repeat(2,1fr)}
  .hero{padding-top:60px}
- .visual{min-height:280px}
+ .visual{min-height:0}
  nav{gap:12px}
 }
 @media(max-width:560px){
@@ -111,7 +123,7 @@ footer a{color:#d3c6ff}
  .cards{grid-template-columns:1fr}
  section{padding:60px 0}
  h1{letter-spacing:-1.5px}
- .visual{min-height:245px}
+ .visual{min-height:0}
 }
 </style>
 </head>
@@ -144,7 +156,7 @@ footer a{color:#d3c6ff}
     </div>
     <div class="visual" aria-label="Creative editing illustration">
       <span class="float f1">✂️ Precision Editing</span>
-      <span class="play">▶</span>
+      <img class="hero-img" src="images/kashif.jpg" alt="Muhammad Kashif Saleem, Founder of KG Edits" width="715" height="374">
       <span class="float f2">🎧 Audio & Sound</span>
       <span class="float f3">✨ Creative Effects</span>
     </div>
@@ -171,15 +183,16 @@ footer a{color:#d3c6ff}
 
 <section class="about" id="about">
   <div class="container about-grid">
-    <div class="about-art">
-      <strong>Ideas into<br>Impact.</strong>
-      <span>Thoughtful cuts. Clear sound. Strong storytelling.</span>
+    <div class="about-art has-img">
+      <img src="images/kashif-about.jpg" alt="Muhammad Kashif Saleem, Founder of KG Edits" loading="lazy">
+      <div class="cap"><strong>Ideas into Impact.</strong><span>Thoughtful cuts. Clear sound. Strong storytelling.</span></div>
     </div>
     <div class="about-copy">
       <span class="eyebrow">About Me</span>
-      <h2>I'm KG Edits, a creative video editor.</h2>
-      <p>I help turn raw footage into clear, engaging content through editing, pacing, sound, and visual polish. My goal is to make every video feel purposeful and keep viewers interested.</p>
-      <p>I also have experience listed with <strong>ElevateXCrew</strong> as a Video Editor and <strong>Akhuwat</strong> as a Student Intern.</p>
+      <h2>I'm Muhammad Kashif Saleem, Founder and Owner of KG Edits.</h2>
+      <p>I’m a Professional Video Editor, Creative Visual Designer, and AI Enthusiast. I create engaging and professional videos for YouTube, TikTok, Facebook, Instagram, and other social media platforms.</p>
+      <p>My editing work includes <strong>video editing, reels &amp; shorts, social media content, captions, transitions, color correction, color grading, audio enhancement, sound design, motion graphics, and promotional videos.</strong></p>
+      <p>My goal is to turn raw footage and creative ideas into high-quality visual content that connects with audiences and delivers results.</p>
       <div class="skills">
         <span>Video Editing</span><span>Audio Cleanup</span><span>Reels & Shorts</span>
         <span>Transitions</span><span>Color Correction</span><span>Storytelling</span>
@@ -193,20 +206,50 @@ footer a{color:#d3c6ff}
     <div class="section-head">
       <span class="eyebrow">Selected Work</span>
       <h2>My Portfolio</h2>
-      <p>A showcase area for your best editing projects.</p>
+      <p>A showcase of selected video editing projects.</p>
     </div>
     <div class="cards">
       <article class="card project">
-        <div class="project-cover c1">REELS / SHORTS</div>
-        <div class="project-body"><small>Short-form content</small><h3>Social Media Edits</h3><p>Fast-paced edits, captions, transitions, and engaging storytelling.</p><p class="note">Replace this card with your actual project video or link.</p></div>
+        <video class="project-video" controls preload="metadata" playsinline poster="images/project1.jpg" aria-label="Play Auto Caption Tutorial">
+          <source src="videos/project1.mp4" type="video/mp4">
+          Your browser does not support HTML video.
+        </video>
+        <div class="project-body"><small>Tutorial · Captions</small><h3>Auto Caption Tutorial</h3></div>
       </article>
       <article class="card project">
-        <div class="project-cover c2">YOUTUBE</div>
-        <div class="project-body"><small>Long-form content</small><h3>YouTube Video Editing</h3><p>Structured video edits with clean pacing, audio, and visual polish.</p><p class="note">Replace this card with your actual project video or link.</p></div>
+        <video class="project-video" controls preload="metadata" playsinline poster="images/project2.jpg" aria-label="Play Color Grading in CapCut">
+          <source src="videos/project2.mp4" type="video/mp4">
+          Your browser does not support HTML video.
+        </video>
+        <div class="project-body"><small>Tutorial · Color</small><h3>Color Grading in CapCut</h3></div>
       </article>
       <article class="card project">
-        <div class="project-cover c3">AUDIO + VIDEO</div>
-        <div class="project-body"><small>Sound & visuals</small><h3>Creative Video Production</h3><p>Sound effects, music timing, color adjustments, and creative finishing.</p><p class="note">Replace this card with your actual project video or link.</p></div>
+        <video class="project-video" controls preload="metadata" playsinline poster="images/project3.jpg" aria-label="Play Sound Design Essentials">
+          <source src="videos/project3.mp4" type="video/mp4">
+          Your browser does not support HTML video.
+        </video>
+        <div class="project-body"><small>Sound design · Whoosh, Boom, Click, Pop, Zap</small><h3>Sound Design Essentials</h3></div>
+      </article>
+      <article class="card project">
+        <video class="project-video" controls preload="metadata" playsinline poster="images/project4.jpg" aria-label="Play Rare Transition Sound Effects">
+          <source src="videos/project4.mp4" type="video/mp4">
+          Your browser does not support HTML video.
+        </video>
+        <div class="project-body"><small>Sound design · Transitions</small><h3>Rare Transition Sound Effects</h3></div>
+      </article>
+      <article class="card project">
+        <video class="project-video" controls preload="metadata" playsinline poster="images/project5.jpg" aria-label="Play Minimalist Edit">
+          <source src="videos/project5.mp4" type="video/mp4">
+          Your browser does not support HTML video.
+        </video>
+        <div class="project-body"><small>Short-form edit</small><h3>Minimalist Edit</h3></div>
+      </article>
+      <article class="card project">
+        <video class="project-video" controls preload="metadata" playsinline poster="images/project6.jpg" aria-label="Play Free Editor Resource">
+          <source src="videos/project6.mp4" type="video/mp4">
+          Your browser does not support HTML video.
+        </video>
+        <div class="project-body"><small>Editor resource</small><h3>Free Editor Resource</h3></div>
       </article>
     </div>
   </div>
@@ -219,8 +262,9 @@ footer a{color:#d3c6ff}
       <h2>Experience & Background</h2>
     </div>
     <div class="timeline">
-      <article class="job"><h3>ElevateXCrew</h3><div class="role">Video Editor</div><p class="muted">Video editing experience. Add your exact responsibilities, projects, and dates here.</p></article>
-      <article class="job"><h3>Akhuwat</h3><div class="role">Student Intern</div><p class="muted">Internship experience. Add your department, duties, and dates here for an accurate professional profile.</p></article>
+      <article class="job"><h3>ElevateXCrew</h3><div class="role">Video Editor</div><p class="muted">Creating edited videos for ElevateXCrew, from creative editing and storytelling visuals to fast, reliable delivery.</p></article>
+      <article class="job"><h3>M Tech Expert Solution</h3><div class="role">Video Editor</div></article>
+      <article class="job"><h3>Akhuwat</h3><div class="role">Student Intern</div><p class="muted">Internship experience as a student intern.</p></article>
     </div>
   </div>
 </section>
