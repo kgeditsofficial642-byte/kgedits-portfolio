@@ -7,12 +7,12 @@
 <title>KG Edits | Professional Video Editor</title>
 
 <meta name="description"
-content="KG Edits — Professional Video Editing, Reels, Shorts, YouTube Videos, Color Grading, Audio Editing, Motion Graphics and Creative Content.">
+content="KG Edits — Professional Video Editor, Creative Visual Designer and AI Enthusiast. Video Editing, Reels, Shorts, YouTube Videos, Color Grading, Audio Editing, Motion Graphics and AI Content.">
 
 <style>
 
 /* =========================================================
-   KG EDITS — PROFESSIONAL VIDEO EDITING THEME
+   KG EDITS — VIDEO EDITING PORTFOLIO
    Dark Cinematic + Orange + Blue
 ========================================================= */
 
@@ -48,14 +48,19 @@ html{
 }
 
 body{
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 
     background:
-        radial-gradient(circle at 80% 0%,rgba(255,122,24,.08),transparent 30%),
-        radial-gradient(circle at 10% 30%,rgba(22,140,255,.06),transparent 30%),
+        radial-gradient(
+            circle at 80% 0%,
+            rgba(255,122,24,.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 10% 30%,
+            rgba(22,140,255,.06),
+            transparent 30%
+        ),
         var(--bg);
 
     color:var(--text);
@@ -116,7 +121,7 @@ header{
 nav{
     display:flex;
     align-items:center;
-    gap:24px;
+    gap:22px;
     flex-wrap:wrap;
 }
 
@@ -295,7 +300,7 @@ h1{
 }
 
 /* =========================================================
-   EDITING SCREEN HERO VISUAL
+   HERO IMAGE
 ========================================================= */
 
 .visual{
@@ -329,8 +334,6 @@ h1{
     opacity:.82;
 }
 
-/* Dark cinematic overlay */
-
 .visual:after{
     content:"";
 
@@ -348,8 +351,6 @@ h1{
     pointer-events:none;
 }
 
-/* Editing top bar */
-
 .edit-bar{
     position:absolute;
 
@@ -359,8 +360,7 @@ h1{
 
     height:42px;
 
-    background:
-        rgba(7,9,13,.94);
+    background:rgba(7,9,13,.94);
 
     border-bottom:1px solid #303641;
 
@@ -397,8 +397,6 @@ h1{
     font-weight:700;
 }
 
-/* Timeline */
-
 .timeline-visual{
     position:absolute;
 
@@ -408,8 +406,7 @@ h1{
 
     height:78px;
 
-    background:
-        rgba(5,7,10,.93);
+    background:rgba(5,7,10,.93);
 
     border-top:1px solid #303641;
 
@@ -496,8 +493,6 @@ h1{
 .clip:nth-child(5){
     width:10%;
 }
-
-/* Floating editing labels */
 
 .float{
     position:absolute;
@@ -655,13 +650,116 @@ h2{
 }
 
 /* =========================================================
+   TOOLS SECTION
+========================================================= */
+
+.tools{
+    background:
+        linear-gradient(
+            180deg,
+            #0a0d12,
+            #10141b
+        );
+
+    border-top:1px solid #181d25;
+
+    border-bottom:1px solid #181d25;
+}
+
+.tools-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:18px;
+}
+
+.tool{
+    position:relative;
+
+    padding:23px;
+
+    border-radius:12px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #151a22,
+            #0e1218
+        );
+
+    border:1px solid #282f39;
+
+    overflow:hidden;
+
+    transition:.3s;
+}
+
+.tool:hover{
+    transform:translateY(-5px);
+
+    border-color:var(--orange);
+}
+
+.tool:before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--orange),
+            var(--blue)
+        );
+}
+
+.tool-number{
+    color:var(--orange);
+
+    font-size:11px;
+
+    font-weight:900;
+
+    letter-spacing:1.5px;
+}
+
+.tool h3{
+    margin:7px 0 4px;
+
+    font-size:19px;
+}
+
+.tool p{
+    color:var(--muted);
+
+    font-size:13px;
+}
+
+.tool-main{
+    border-color:#ff7a18;
+
+    box-shadow:
+        0 12px 35px rgba(255,122,24,.10);
+}
+
+.tool-main h3{
+    color:#fff;
+}
+
+/* =========================================================
    ABOUT
 ========================================================= */
 
 .about{
     background:#0b0e13;
-
-    border-top:1px solid #181d25;
 
     border-bottom:1px solid #181d25;
 }
@@ -768,7 +866,7 @@ h2{
 }
 
 /* =========================================================
-   COLOR GRADING SECTION STYLE
+   COLOR STRIP
 ========================================================= */
 
 .color-strip{
@@ -1070,6 +1168,11 @@ footer a{
         grid-template-columns:1fr;
     }
 
+    .tools-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
     .hero{
         padding-top:70px;
     }
@@ -1078,7 +1181,6 @@ footer a{
         grid-template-columns:
             repeat(2,1fr);
     }
-
 }
 
 @media(max-width:600px){
@@ -1099,7 +1201,8 @@ footer a{
         font-size:12px;
     }
 
-    .cards{
+    .cards,
+    .tools-grid{
         grid-template-columns:1fr;
     }
 
@@ -1136,7 +1239,6 @@ footer a{
     .timeline-visual{
         height:65px;
     }
-
 }
 
 /* =========================================================
@@ -1168,15 +1270,11 @@ KG <span>Edits.</span>
 <nav aria-label="Main navigation">
 
 <a href="#home">Home</a>
-
 <a href="#services">Services</a>
-
+<a href="#tools">Tools</a>
 <a href="#about">About</a>
-
 <a href="#portfolio">Portfolio</a>
-
 <a href="#experience">Experience</a>
-
 <a href="#contact">Contact</a>
 
 </nav>
@@ -1209,9 +1307,11 @@ Make Every Frame
 </h1>
 
 <p>
-Hi, I'm <strong>KG Edits</strong> — a video editor focused on creating
-engaging videos, social media reels, YouTube content, clean audio,
-color grading, visual effects, and polished visual stories.
+Hi, I'm <strong>Muhammad Kashif Saleem</strong>, the creator
+behind <strong>KG Edits</strong> — a Professional Video Editor,
+Creative Visual Designer and AI Enthusiast focused on creating
+engaging videos, reels, shorts, YouTube content, clean audio,
+color grading, motion graphics and polished visual stories.
 </p>
 
 <div class="actions">
@@ -1231,15 +1331,15 @@ Hire Me
 </div>
 
 
-<!-- VIDEO EDITOR STYLE VISUAL -->
+<!-- ONLY IMAGE USED IN THE WEBSITE -->
 
 <div class="visual"
-aria-label="Professional video editing workspace">
+aria-label="KG Edits professional video editing workspace">
 
 <img
 class="hero-img"
 src="images/kashif.jpg"
-alt="Muhammad Kashif Saleem, Founder of KG Edits"
+alt="Muhammad Kashif Saleem - KG Edits"
 width="715"
 height="450"
 >
@@ -1247,11 +1347,9 @@ height="450"
 <div class="edit-bar">
 
 <div class="dots">
-
 <span></span>
 <span></span>
 <span></span>
-
 </div>
 
 <div class="edit-title">
@@ -1474,13 +1572,210 @@ products, services and social media campaigns.
 
 
 <!-- =====================================================
+     TOOLS I USE
+===================================================== -->
+
+<section class="tools" id="tools">
+
+<div class="container">
+
+<div class="section-head">
+
+<span class="eyebrow">
+Editing Software
+</span>
+
+<h2>
+Tools I Use
+</h2>
+
+<p>
+Software and creative tools I use for video editing,
+color, motion graphics, social media content and AI-assisted production.
+</p>
+
+</div>
+
+
+<div class="tools-grid">
+
+
+<article class="tool tool-main">
+
+<span class="tool-number">
+01 · PRIMARY TOOL
+</span>
+
+<h3>
+Adobe Premiere Pro
+</h3>
+
+<p>
+Professional video editing, cutting, trimming, transitions,
+captions, storytelling, audio editing and complete video production.
+</p>
+
+</article>
+
+
+<article class="tool tool-main">
+
+<span class="tool-number">
+02 · PRIMARY TOOL
+</span>
+
+<h3>
+CapCut Pro
+</h3>
+
+<p>
+Reels, Shorts, captions, speed ramping, transitions,
+social media editing, effects and fast creative content.
+</p>
+
+</article>
+
+
+<article class="tool">
+
+<span class="tool-number">
+03 · MOTION & VFX
+</span>
+
+<h3>
+Adobe After Effects
+</h3>
+
+<p>
+Motion graphics, visual effects, text animation,
+compositing and creative animations.
+</p>
+
+</article>
+
+
+<article class="tool">
+
+<span class="tool-number">
+04 · COLOR
+</span>
+
+<h3>
+DaVinci Resolve
+</h3>
+
+<p>
+Color correction, color grading, cinematic looks
+and professional visual finishing.
+</p>
+
+</article>
+
+
+<article class="tool">
+
+<span class="tool-number">
+05 · VIDEO EDITING
+</span>
+
+<h3>
+Filmora
+</h3>
+
+<p>
+Creative video editing, transitions, effects,
+titles and social media content.
+</p>
+
+</article>
+
+
+<article class="tool">
+
+<span class="tool-number">
+06 · MOBILE EDITING
+</span>
+
+<h3>
+VN Video Editor
+</h3>
+
+<p>
+Mobile video editing, cuts, transitions, captions
+and short-form content.
+</p>
+
+</article>
+
+
+<article class="tool">
+
+<span class="tool-number">
+07 · MOBILE CONTENT
+</span>
+
+<h3>
+InShot
+</h3>
+
+<p>
+Reels, Shorts, social media videos, text,
+music and quick mobile edits.
+</p>
+
+</article>
+
+
+<article class="tool">
+
+<span class="tool-number">
+08 · CREATIVE DESIGN
+</span>
+
+<h3>
+Canva
+</h3>
+
+<p>
+Social media visuals, thumbnails, promotional graphics
+and creative content design.
+</p>
+
+</article>
+
+
+<article class="tool">
+
+<span class="tool-number">
+09 · AI WORKFLOW
+</span>
+
+<h3>
+AI Video Tools
+</h3>
+
+<p>
+AI-assisted video creation, image-to-video,
+text-to-video, automation and creative production.
+</p>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
      ABOUT
 ===================================================== -->
 
 <section class="about" id="about">
 
 <div class="container about-grid">
-
 
 <div class="about-copy">
 
@@ -1510,6 +1805,15 @@ and promotional videos.
 </p>
 
 <p>
+I work with editing software including
+<strong>
+Adobe Premiere Pro, CapCut Pro, After Effects,
+DaVinci Resolve, Filmora, VN Video Editor, InShot,
+Canva and AI video tools.
+</strong>
+</p>
+
+<p>
 My goal is to turn raw footage and creative ideas into
 high-quality visual content that connects with audiences
 and delivers results.
@@ -1518,21 +1822,18 @@ and delivers results.
 
 <div class="skills">
 
-<span>Video Editing</span>
-
+<span>Adobe Premiere Pro</span>
+<span>CapCut Pro</span>
+<span>After Effects</span>
+<span>DaVinci Resolve</span>
+<span>Filmora</span>
+<span>VN Editor</span>
+<span>InShot</span>
+<span>Canva</span>
+<span>AI Video Tools</span>
 <span>Color Grading</span>
-
 <span>Audio Editing</span>
-
-<span>Sound Design</span>
-
-<span>Reels & Shorts</span>
-
 <span>Motion Graphics</span>
-
-<span>Transitions</span>
-
-<span>Storytelling</span>
 
 </div>
 
@@ -1562,7 +1863,8 @@ My Video Editing Portfolio
 </h2>
 
 <p>
-A showcase of selected editing, sound design and creative projects.
+Watch selected editing, sound design, color and creative projects
+directly on this website.
 </p>
 
 </div>
@@ -1829,8 +2131,8 @@ Video Editor
 </div>
 
 <p class="muted">
-Creating edited videos for ElevateXCrew, from creative
-editing and storytelling visuals to fast and reliable delivery.
+Creating edited videos for ElevateXCrew, including creative
+editing, storytelling visuals and social media content.
 </p>
 
 </article>
@@ -1847,7 +2149,8 @@ Video Editor
 </div>
 
 <p class="muted">
-Video editing experience and creative production work.
+Video editing experience, creative production work
+and practical editing skills.
 </p>
 
 </article>
@@ -1864,8 +2167,8 @@ Student Intern
 </div>
 
 <p class="muted">
-Student internship experience with learning in Artificial
-Intelligence, AI tools, automation and prompt engineering.
+Learning and practical experience in Artificial Intelligence,
+AI tools, automation and prompt engineering.
 </p>
 
 </article>
@@ -1899,8 +2202,8 @@ Have a video to edit?
 
 <p class="muted">
 Let's discuss your project. Contact KG Edits for video editing,
-color grading, audio cleanup, reels, shorts, YouTube videos
-and social media content.
+color grading, audio cleanup, reels, shorts, YouTube videos,
+social media content and AI-assisted video production.
 </p>
 
 
@@ -1913,7 +2216,9 @@ and social media content.
 Phone / WhatsApp
 </strong>
 
-03263658254
+<a href="tel:+923263658254">
+0326-3658254
+</a>
 
 </div>
 
@@ -1924,7 +2229,9 @@ Phone / WhatsApp
 Email
 </strong>
 
+<a href="mailto:kgeditsofficial642@gmail.com">
 kgeditsofficial642@gmail.com
+</a>
 
 </div>
 
@@ -1965,6 +2272,16 @@ YouTube ↗
 </a>
 
 
+<a
+class="social"
+href="https://whatsapp.com/channel/0029Vb8TkBYFHWpuBko2AR40"
+target="_blank"
+rel="noopener noreferrer"
+>
+WhatsApp Channel ↗
+</a>
+
+
 </div>
 
 </div>
@@ -1977,8 +2294,8 @@ Ready to start your project?
 </h3>
 
 <p>
-Send me an email with your video idea, preferred style,
-deadline and any reference links.
+Send me your video idea, preferred style, deadline
+and any reference links.
 </p>
 
 
@@ -1991,7 +2308,7 @@ Email Me About Your Project ↗
 
 
 <p class="note">
-For WhatsApp, use the contact number shown on this page.
+You can also contact KG Edits directly on WhatsApp.
 </p>
 
 
@@ -2031,7 +2348,7 @@ KG <span>Edits.</span>
 </small>
 
 <small>
-Video Editing • Color Grading • Audio • Creative Content
+Video Editing • Color Grading • Audio • Motion Graphics • AI
 </small>
 
 </div>
