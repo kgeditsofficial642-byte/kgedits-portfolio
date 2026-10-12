@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,642 +7,1224 @@
 <title>KG Edits | Professional Video Editor</title>
 
 <meta name="description"
-content="KG Edits — Professional Video Editor, Creative Visual Designer and AI Enthusiast. Video editing, reels, shorts, YouTube videos, audio editing and creative content.">
+content="KG Edits — Professional Video Editing, Reels, Shorts, YouTube Videos, Color Grading, Audio Editing, Motion Graphics and Creative Content.">
 
 <style>
+
+/* =========================================================
+   KG EDITS — PROFESSIONAL VIDEO EDITING THEME
+   Dark Cinematic + Orange + Blue
+========================================================= */
+
 :root{
-  --bg:#f6f7ff;
-  --ink:#17172f;
-  --purple:#7048ff;
-  --blue:#268bff;
-  --pink:#ff4fa3;
-  --cyan:#00bfc8;
-  --orange:#ff9d32;
-  --white:#ffffff;
+    --bg:#080a0f;
+    --bg2:#0d1017;
+    --panel:#11151d;
+    --panel2:#151a23;
+
+    --white:#ffffff;
+    --text:#f4f5f7;
+    --muted:#9da4b0;
+
+    --orange:#ff7a18;
+    --orange2:#ffb347;
+    --blue:#168cff;
+    --cyan:#00d4ff;
+
+    --line:#252b35;
+
+    --shadow:0 20px 60px rgba(0,0,0,.45);
 }
 
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth;
-  scroll-padding-top:90px;
+    scroll-behavior:smooth;
+    scroll-padding-top:90px;
 }
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--bg);
-  color:var(--ink);
-  line-height:1.7;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        radial-gradient(circle at 80% 0%,rgba(255,122,24,.08),transparent 30%),
+        radial-gradient(circle at 10% 30%,rgba(22,140,255,.06),transparent 30%),
+        var(--bg);
+
+    color:var(--text);
+    line-height:1.7;
 }
 
 a{
-  text-decoration:none;
-  color:inherit;
+    text-decoration:none;
+    color:inherit;
 }
 
-button,a{
-  transition:.25s;
+button,
+a{
+    transition:.25s ease;
 }
 
 .container{
-  width:min(1120px,90%);
-  margin:auto;
+    width:min(1140px,92%);
+    margin:auto;
 }
 
-/* NAVIGATION */
+/* =========================================================
+   HEADER
+========================================================= */
 
 header{
-  position:sticky;
-  top:0;
-  z-index:10;
-  background:#ffffffed;
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid #e8e5ff;
+    position:sticky;
+    top:0;
+    z-index:100;
+
+    background:rgba(8,10,15,.92);
+
+    backdrop-filter:blur(16px);
+
+    border-bottom:1px solid var(--line);
 }
 
 .nav{
-  min-height:76px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
+    min-height:76px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:25px;
 }
 
 .logo{
-  font-size:27px;
-  font-weight:900;
-  letter-spacing:-1px;
-  color:var(--purple);
+    font-size:28px;
+    font-weight:900;
+    letter-spacing:-1.5px;
 }
 
 .logo span{
-  color:var(--pink);
+    color:var(--orange);
 }
 
 nav{
-  display:flex;
-  gap:22px;
-  align-items:center;
-  flex-wrap:wrap;
+    display:flex;
+    align-items:center;
+    gap:24px;
+    flex-wrap:wrap;
 }
 
 nav a{
-  font-size:14px;
-  font-weight:700;
+    color:#c9ced6;
+    font-size:14px;
+    font-weight:700;
 }
 
 nav a:hover{
-  color:var(--purple);
+    color:var(--orange);
 }
 
-/* BUTTONS */
+/* =========================================================
+   BUTTONS
+========================================================= */
 
 .btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:12px 20px;
-  border-radius:12px;
-  font-weight:800;
-  border:0;
-  cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:12px 20px;
+
+    border-radius:9px;
+
+    font-weight:800;
+
+    cursor:pointer;
 }
 
 .btn-primary{
-  background:linear-gradient(110deg,var(--purple),var(--blue));
-  color:white;
-  box-shadow:0 8px 22px #7048ff35;
+    color:#fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--orange),
+            #ff9b32
+        );
+
+    box-shadow:
+        0 10px 30px rgba(255,122,24,.20);
 }
 
 .btn-primary:hover{
-  transform:translateY(-3px);
-  box-shadow:0 12px 26px #7048ff45;
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(255,122,24,.32);
 }
 
 .btn-light{
-  background:white;
-  border:1px solid #e5e0ff;
-  color:var(--ink);
+    color:#fff;
+
+    background:#151a22;
+
+    border:1px solid #303743;
 }
 
 .btn-light:hover{
-  border-color:var(--purple);
-  color:var(--purple);
+    border-color:var(--orange);
+    color:var(--orange);
 }
 
-/* HERO */
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero{
-  padding:95px 0 80px;
-  overflow:hidden;
-  background:
-  radial-gradient(ellipse at 90% 10%,#dcd4ff 0,transparent 35%),
-  radial-gradient(ellipse at 0 80%,#c9f8f8 0,transparent 32%),
-  var(--bg);
+    position:relative;
+
+    padding:100px 0 90px;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            #090b10,
+            #0b0e14
+        );
+}
+
+.hero:before{
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    right:-180px;
+    top:-180px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,122,24,.15),
+            transparent 65%
+        );
+
+    pointer-events:none;
 }
 
 .hero-grid{
-  display:grid;
-  grid-template-columns:1.15fr .85fr;
-  gap:50px;
-  align-items:center;
+    display:grid;
+
+    grid-template-columns:
+        1.05fr .95fr;
+
+    gap:60px;
+
+    align-items:center;
 }
 
 .tag{
-  display:inline-block;
-  padding:7px 13px;
-  border-radius:99px;
-  background:#e8e1ff;
-  color:#5630dc;
-  font-weight:800;
-  font-size:12px;
-  letter-spacing:1px;
+    display:inline-flex;
+
+    padding:7px 13px;
+
+    border-radius:6px;
+
+    background:#171b22;
+
+    border:1px solid #303640;
+
+    color:var(--orange2);
+
+    font-size:11px;
+
+    font-weight:900;
+
+    letter-spacing:1.5px;
 }
 
 h1{
-  font-size:clamp(42px,6vw,72px);
-  line-height:1.08;
-  letter-spacing:-2.5px;
-  margin:20px 0;
+    font-size:
+        clamp(45px,6vw,76px);
+
+    line-height:1.03;
+
+    letter-spacing:-3px;
+
+    margin:20px 0;
 }
 
 .gradient{
-  background:linear-gradient(
-    100deg,
-    var(--purple),
-    var(--pink),
-    var(--orange)
-  );
-  background-clip:text;
-  -webkit-background-clip:text;
-  color:transparent;
+    background:
+        linear-gradient(
+            90deg,
+            var(--orange),
+            var(--orange2)
+        );
+
+    background-clip:text;
+    -webkit-background-clip:text;
+
+    color:transparent;
 }
 
 .hero p{
-  max-width:610px;
-  color:#5d5d77;
-  font-size:17px;
-  margin-bottom:25px;
+    max-width:630px;
+
+    color:var(--muted);
+
+    font-size:17px;
+
+    margin-bottom:28px;
 }
 
 .actions{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
 }
 
-/* HERO IMAGE */
+/* =========================================================
+   EDITING SCREEN HERO VISUAL
+========================================================= */
 
 .visual{
-  aspect-ratio:715/500;
-  border-radius:30px;
-  position:relative;
-  overflow:hidden;
-  background:linear-gradient(
-    145deg,
-    #7048ff,
-    #268bff 55%,
-    #00bfc8
-  );
-  box-shadow:0 25px 60px #7048ff30;
+    position:relative;
+
+    width:100%;
+
+    aspect-ratio:16/10;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    background:#050608;
+
+    border:1px solid #303641;
+
+    box-shadow:var(--shadow);
 }
 
-.hero-img{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  z-index:1;
+.visual img.hero-img{
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:.82;
 }
 
-.visual::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    180deg,
-    transparent 55%,
-    #17172f80
-  );
-  z-index:2;
+/* Dark cinematic overlay */
+
+.visual:after{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.05),
+            rgba(0,0,0,.55)
+        );
+
+    pointer-events:none;
 }
+
+/* Editing top bar */
+
+.edit-bar{
+    position:absolute;
+
+    top:0;
+    left:0;
+    right:0;
+
+    height:42px;
+
+    background:
+        rgba(7,9,13,.94);
+
+    border-bottom:1px solid #303641;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 14px;
+
+    z-index:4;
+}
+
+.dots{
+    display:flex;
+    gap:6px;
+}
+
+.dots span{
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:#555;
+}
+
+.edit-title{
+    margin-left:14px;
+
+    font-size:11px;
+
+    color:#aeb5bf;
+
+    font-weight:700;
+}
+
+/* Timeline */
+
+.timeline-visual{
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:78px;
+
+    background:
+        rgba(5,7,10,.93);
+
+    border-top:1px solid #303641;
+
+    z-index:4;
+
+    padding:10px;
+}
+
+.time-line{
+    height:4px;
+
+    background:#252b34;
+
+    position:relative;
+
+    margin-bottom:8px;
+}
+
+.time-line:after{
+    content:"";
+
+    position:absolute;
+
+    left:38%;
+
+    top:-4px;
+
+    width:2px;
+    height:12px;
+
+    background:var(--orange);
+}
+
+.track{
+    height:16px;
+
+    display:flex;
+
+    gap:3px;
+
+    margin-bottom:3px;
+}
+
+.clip{
+    border-radius:3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #17324d,
+            #235d82
+        );
+
+    border:1px solid #367da9;
+}
+
+.clip.orange{
+    background:
+        linear-gradient(
+            90deg,
+            #71330d,
+            #c95e16
+        );
+
+    border-color:#ff7a18;
+}
+
+.clip:nth-child(1){
+    width:20%;
+}
+
+.clip:nth-child(2){
+    width:28%;
+}
+
+.clip:nth-child(3){
+    width:17%;
+}
+
+.clip:nth-child(4){
+    width:25%;
+}
+
+.clip:nth-child(5){
+    width:10%;
+}
+
+/* Floating editing labels */
 
 .float{
-  position:absolute;
-  z-index:3;
-  background:#ffffffed;
-  padding:12px 15px;
-  border-radius:14px;
-  font-weight:800;
-  font-size:13px;
-  box-shadow:0 10px 25px #16103b20;
+    position:absolute;
+
+    z-index:5;
+
+    padding:9px 12px;
+
+    border-radius:6px;
+
+    background:rgba(10,12,17,.90);
+
+    border:1px solid #343b47;
+
+    color:#e7e9ed;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.4);
 }
 
 .f1{
-  top:20px;
-  left:20px;
+    top:58px;
+    left:16px;
 }
 
 .f2{
-  bottom:20px;
-  right:20px;
+    top:58px;
+    right:16px;
 }
 
 .f3{
-  bottom:95px;
-  left:20px;
+    bottom:91px;
+    left:16px;
 }
 
-/* SECTIONS */
+/* =========================================================
+   SECTIONS
+========================================================= */
 
 section{
-  padding:82px 0;
+    padding:90px 0;
 }
 
 .section-head{
-  text-align:center;
-  margin-bottom:40px;
+    text-align:center;
+    margin-bottom:45px;
 }
 
 .eyebrow{
-  text-transform:uppercase;
-  font-size:12px;
-  letter-spacing:2px;
-  font-weight:900;
-  color:var(--purple);
+    text-transform:uppercase;
+
+    font-size:11px;
+
+    letter-spacing:2.5px;
+
+    font-weight:900;
+
+    color:var(--orange);
 }
 
 h2{
-  font-size:clamp(30px,4vw,44px);
-  line-height:1.2;
-  margin:8px 0 12px;
-  letter-spacing:-1px;
+    font-size:
+        clamp(31px,4vw,46px);
+
+    line-height:1.15;
+
+    margin:8px 0 12px;
+
+    letter-spacing:-1.5px;
 }
 
 .section-head p,
 .muted{
-  color:#686880;
+    color:var(--muted);
 }
 
-/* SERVICES */
+/* =========================================================
+   SERVICES
+========================================================= */
 
 .cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:20px;
 }
 
 .card{
-  background:white;
-  border:1px solid #e9e6fa;
-  border-radius:20px;
-  padding:25px;
-  box-shadow:0 8px 25px #21135b06;
+    background:
+        linear-gradient(
+            145deg,
+            #12161e,
+            #0e1218
+        );
+
+    border:1px solid var(--line);
+
+    border-radius:12px;
+
+    padding:26px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.15);
+
+    transition:.3s;
 }
 
 .card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 15px 35px #21135b12;
+    transform:translateY(-6px);
+
+    border-color:#444c59;
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.3);
 }
 
 .icon{
-  width:52px;
-  height:52px;
-  border-radius:15px;
-  display:grid;
-  place-items:center;
-  font-size:25px;
-  margin-bottom:16px;
-  background:#ece5ff;
-}
+    width:54px;
+    height:54px;
 
-.card:nth-child(2) .icon{
-  background:#ffe2ef;
-}
+    border-radius:10px;
 
-.card:nth-child(3) .icon{
-  background:#d9f9f7;
+    display:grid;
+    place-items:center;
+
+    font-size:24px;
+
+    margin-bottom:17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #33200f,
+            #1c1711
+        );
+
+    border:1px solid #5c3518;
 }
 
 .card h3{
-  margin-bottom:8px;
-  font-size:20px;
+    margin-bottom:8px;
+
+    font-size:20px;
 }
 
 .card p{
-  color:#686880;
-  font-size:14px;
+    color:var(--muted);
+
+    font-size:14px;
 }
 
-/* ABOUT */
+/* =========================================================
+   ABOUT
+========================================================= */
 
 .about{
-  background:white;
+    background:#0b0e13;
+
+    border-top:1px solid #181d25;
+
+    border-bottom:1px solid #181d25;
 }
 
 .about-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
-  align-items:center;
+    display:grid;
+
+    grid-template-columns:
+        .8fr 1.2fr;
+
+    gap:60px;
+
+    align-items:center;
 }
 
-.about-art{
-  overflow:hidden;
-  position:relative;
-  border-radius:25px;
-  aspect-ratio:715/953;
-  width:100%;
-  max-width:420px;
-  margin:auto;
-  background:#e5dcff;
+.about-art.has-img{
+    position:relative;
+
+    overflow:hidden;
+
+    min-height:500px;
+
+    border-radius:12px;
+
+    background:#080a0e;
+
+    border:1px solid #303641;
+
+    box-shadow:var(--shadow);
 }
 
-.about-art img{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
+.about-art.has-img img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    position:absolute;
+
+    inset:0;
 }
 
-.about-art .cap{
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:0;
-  padding:70px 26px 24px;
-  background:linear-gradient(
-    transparent,
-    #17172fe8
-  );
-  color:white;
+.about-art.has-img:after{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            transparent 45%,
+            rgba(0,0,0,.9)
+        );
 }
 
-.about-art .cap strong{
-  display:block;
-  font-size:30px;
+.about-art.has-img .cap{
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    padding:50px 25px 24px;
+
+    z-index:2;
 }
 
-.about-art .cap span{
-  color:#e7e3ff;
+.about-art.has-img .cap strong{
+    color:#fff;
+
+    font-size:30px;
+
+    display:block;
+}
+
+.about-art.has-img .cap span{
+    color:#bfc4cc;
+
+    font-size:14px;
 }
 
 .about-copy p{
-  margin:15px 0;
-  color:#686880;
+    margin:15px 0;
+
+    color:var(--muted);
 }
 
 .skills{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-top:22px;
+    display:flex;
+
+    gap:9px;
+
+    flex-wrap:wrap;
+
+    margin-top:24px;
 }
 
 .skills span{
-  padding:8px 12px;
-  background:#eee9ff;
-  border-radius:10px;
-  color:#5630dc;
-  font-weight:700;
-  font-size:13px;
+    padding:8px 12px;
+
+    border-radius:6px;
+
+    background:#151a21;
+
+    border:1px solid #2c333d;
+
+    color:#d8dce2;
+
+    font-size:12px;
+
+    font-weight:800;
 }
 
-/* PORTFOLIO */
+.skills span:hover{
+    border-color:var(--orange);
+
+    color:var(--orange);
+}
+
+/* =========================================================
+   PORTFOLIO
+========================================================= */
 
 .projects{
-  background:linear-gradient(
-    180deg,
-    #f6f7ff,
-    #eeebff
-  );
+    background:
+        linear-gradient(
+            180deg,
+            #080a0f,
+            #0d1016
+        );
 }
 
 .project{
-  padding:0;
-  overflow:hidden;
+    padding:0;
+
+    overflow:hidden;
 }
 
 .project-video{
-  display:block;
-  width:100%;
-  aspect-ratio:16/9;
-  object-fit:contain;
-  background:#17172f;
+    display:block;
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    object-fit:contain;
+
+    background:#030405;
+
+    border-bottom:1px solid #272d36;
 }
 
 .project-body{
-  padding:22px;
+    padding:20px;
 }
 
 .project-body small{
-  color:var(--purple);
-  font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:1px;
+    color:var(--orange);
+
+    font-weight:900;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    font-size:10px;
 }
 
 .project-body h3{
-  margin:5px 0;
+    margin-top:4px;
 }
 
-.project-body p{
-  color:#686880;
-  font-size:14px;
+/* =========================================================
+   COLOR GRADING SECTION STYLE
+========================================================= */
+
+.color-strip{
+    display:flex;
+
+    height:6px;
+
+    margin-top:15px;
+
+    border-radius:50px;
+
+    overflow:hidden;
 }
 
-/* EXPERIENCE */
+.color-strip span:nth-child(1){
+    width:20%;
+    background:#163d63;
+}
+
+.color-strip span:nth-child(2){
+    width:20%;
+    background:#157f91;
+}
+
+.color-strip span:nth-child(3){
+    width:20%;
+    background:#c87925;
+}
+
+.color-strip span:nth-child(4){
+    width:20%;
+    background:#d94325;
+}
+
+.color-strip span:nth-child(5){
+    width:20%;
+    background:#ffb43b;
+}
+
+/* =========================================================
+   EXPERIENCE
+========================================================= */
 
 .experience{
-  background:white;
+    background:#0b0e13;
 }
 
 .timeline{
-  max-width:760px;
-  margin:auto;
-  display:grid;
-  gap:18px;
+    max-width:800px;
+
+    margin:auto;
+
+    display:grid;
+
+    gap:18px;
 }
 
 .job{
-  padding:23px;
-  border-left:4px solid var(--purple);
-  border-radius:0 15px 15px 0;
-  background:#f7f5ff;
+    padding:24px;
+
+    border-left:
+        3px solid var(--orange);
+
+    border-radius:
+        0 10px 10px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #141820,
+            #0f1319
+        );
+
+    border-top:1px solid #252b34;
+
+    border-right:1px solid #252b34;
+
+    border-bottom:1px solid #252b34;
 }
 
 .job h3{
-  font-size:19px;
+    font-size:20px;
 }
 
 .job .role{
-  font-weight:800;
-  color:var(--purple);
+    font-weight:800;
+
+    color:var(--orange);
+
+    margin:3px 0 5px;
 }
 
-/* CONTACT */
+/* =========================================================
+   CONTACT
+========================================================= */
 
 .contact{
-  background:linear-gradient(
-    125deg,
-    #e9e1ff,
-    #e0faff
-  );
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(255,122,24,.09),
+            transparent 30%
+        ),
+
+        #090c11;
+
+    border-top:1px solid #1d222b;
 }
 
 .contact-grid{
-  display:grid;
-  grid-template-columns:.9fr 1.1fr;
-  gap:35px;
-  align-items:start;
+    display:grid;
+
+    grid-template-columns:
+        .9fr 1.1fr;
+
+    gap:40px;
+
+    align-items:start;
 }
 
 .contact-list{
-  display:grid;
-  gap:12px;
-  margin-top:22px;
+    display:grid;
+
+    gap:12px;
+
+    margin-top:24px;
 }
 
 .contact-item{
-  background:white;
-  border-radius:14px;
-  padding:15px;
-  overflow-wrap:anywhere;
+    background:#11151c;
+
+    border:1px solid #272e38;
+
+    border-radius:9px;
+
+    padding:15px;
+
+    overflow-wrap:anywhere;
 }
 
 .contact-item strong{
-  display:block;
-  color:var(--purple);
-  font-size:12px;
-  text-transform:uppercase;
-  letter-spacing:1px;
+    display:block;
+
+    color:var(--orange);
+
+    font-size:11px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
 }
 
 .socials{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  margin-top:20px;
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:20px;
 }
 
 .social{
-  padding:10px 14px;
-  border-radius:10px;
-  background:white;
-  font-weight:800;
-  border:1px solid #e4defa;
+    padding:10px 14px;
+
+    border-radius:7px;
+
+    background:#12171f;
+
+    border:1px solid #2b323d;
+
+    font-weight:800;
+
+    font-size:13px;
 }
 
 .social:hover{
-  background:var(--purple);
-  color:white;
+    background:var(--orange);
+
+    border-color:var(--orange);
+
+    color:#fff;
 }
 
 .contact-box{
-  background:white;
-  padding:28px;
-  border-radius:22px;
-  box-shadow:0 12px 35px #29166d0b;
+    background:
+        linear-gradient(
+            145deg,
+            #141920,
+            #0e1218
+        );
+
+    border:1px solid #2b323d;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    box-shadow:var(--shadow);
 }
 
 .contact-box p{
-  color:#686880;
-  margin:12px 0 20px;
-}
+    color:var(--muted);
 
-.contact-box .btn{
-  margin:5px 5px 5px 0;
+    margin:12px 0 20px;
 }
 
 .note{
-  font-size:12px;
-  color:#77758c;
+    font-size:12px;
+
+    color:#777f8c;
+
+    margin-top:13px;
 }
 
-/* FOOTER */
+/* =========================================================
+   AUDIO WAVE
+========================================================= */
+
+.wave{
+    display:flex;
+
+    align-items:center;
+
+    gap:3px;
+
+    height:35px;
+
+    margin:20px 0;
+}
+
+.wave span{
+    width:3px;
+
+    border-radius:5px;
+
+    background:var(--orange);
+}
+
+.wave span:nth-child(1){height:10px}
+.wave span:nth-child(2){height:18px}
+.wave span:nth-child(3){height:28px}
+.wave span:nth-child(4){height:16px}
+.wave span:nth-child(5){height:30px}
+.wave span:nth-child(6){height:22px}
+.wave span:nth-child(7){height:12px}
+.wave span:nth-child(8){height:25px}
+.wave span:nth-child(9){height:31px}
+.wave span:nth-child(10){height:15px}
+.wave span:nth-child(11){height:23px}
+.wave span:nth-child(12){height:12px}
+.wave span:nth-child(13){height:27px}
+.wave span:nth-child(14){height:19px}
+.wave span:nth-child(15){height:9px}
+
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer{
-  background:#19172f;
-  color:#eae8ff;
-  padding:28px 0;
+    background:#050608;
+
+    color:#e7e9ed;
+
+    padding:30px 0;
+
+    border-top:1px solid #1d222a;
 }
 
 .footer-row{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:15px;
-  flex-wrap:wrap;
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
 }
 
 footer small{
-  color:#b7b3d1;
+    color:#737b87;
 }
 
-/* MOBILE */
+footer a{
+    color:#e5e8ed;
+}
 
-@media(max-width:800px){
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
-  .hero-grid,
-  .about-grid,
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
+@media(max-width:850px){
 
-  .cards{
-    grid-template-columns:repeat(2,1fr);
-  }
+    .hero-grid,
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
 
-  .hero{
-    padding-top:60px;
-  }
+    .hero{
+        padding-top:70px;
+    }
 
-  nav{
-    gap:12px;
-  }
+    .cards{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .about-art.has-img{
+        min-height:420px;
+        max-width:500px;
+        width:100%;
+        margin:auto;
+    }
 
 }
 
-@media(max-width:560px){
+@media(max-width:600px){
 
-  .nav{
-    min-height:75px;
-    padding:15px 0;
-    align-items:flex-start;
-    flex-direction:column;
-  }
+    .nav{
+        flex-direction:column;
 
-  nav{
-    gap:10px 15px;
-  }
+        align-items:flex-start;
 
-  nav a{
-    font-size:12px;
-  }
+        padding:15px 0;
+    }
 
-  .cards{
-    grid-template-columns:1fr;
-  }
+    nav{
+        gap:10px 15px;
+    }
 
-  section{
-    padding:60px 0;
-  }
+    nav a{
+        font-size:12px;
+    }
 
-  h1{
-    letter-spacing:-1.5px;
-  }
+    .cards{
+        grid-template-columns:1fr;
+    }
 
-  .float{
-    font-size:11px;
-    padding:9px 11px;
-  }
+    section{
+        padding:65px 0;
+    }
 
+    h1{
+        letter-spacing:-2px;
+    }
+
+    .visual{
+        aspect-ratio:16/11;
+    }
+
+    .float{
+        font-size:9px;
+
+        padding:7px 9px;
+    }
+
+    .f1{
+        top:50px;
+    }
+
+    .f2{
+        top:50px;
+    }
+
+    .f3{
+        bottom:87px;
+    }
+
+    .timeline-visual{
+        height:65px;
+    }
+
+    .about-art.has-img{
+        min-height:380px;
+    }
+
+}
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+::selection{
+    background:var(--orange);
+    color:#fff;
 }
 
 </style>
@@ -651,7 +1232,9 @@ footer small{
 
 <body>
 
-<!-- HEADER -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header>
 
@@ -662,12 +1245,19 @@ KG <span>Edits.</span>
 </a>
 
 <nav aria-label="Main navigation">
+
 <a href="#home">Home</a>
+
 <a href="#services">Services</a>
+
 <a href="#about">About</a>
+
 <a href="#portfolio">Portfolio</a>
+
 <a href="#experience">Experience</a>
+
 <a href="#contact">Contact</a>
+
 </nav>
 
 </div>
@@ -677,7 +1267,10 @@ KG <span>Edits.</span>
 
 <main>
 
-<!-- HERO -->
+
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero" id="home">
 
@@ -686,7 +1279,7 @@ KG <span>Edits.</span>
 <div>
 
 <span class="tag">
-VIDEO EDITOR • VISUAL DESIGNER • AI ENTHUSIAST
+VIDEO EDITING • COLOR • AUDIO • MOTION
 </span>
 
 <h1>
@@ -695,20 +1288,20 @@ Make Every Frame
 </h1>
 
 <p>
-Hi, I'm <strong>Muhammad Kashif Saleem</strong> —
-Professional Video Editor, Creative Visual Designer,
-and AI Enthusiast behind <strong>KG Edits</strong>.
-I create engaging videos, social media reels,
-YouTube content, clean audio, and polished visual stories.
+Hi, I'm <strong>KG Edits</strong> — a video editor focused on creating
+engaging videos, social media reels, YouTube content, clean audio,
+color grading, visual effects, and polished visual stories.
 </p>
 
 <div class="actions">
 
-<a class="btn btn-primary" href="#portfolio">
+<a class="btn btn-primary"
+href="#portfolio">
 Explore My Work ↗
 </a>
 
-<a class="btn btn-light" href="#contact">
+<a class="btn btn-light"
+href="#contact">
 Hire Me
 </a>
 
@@ -717,27 +1310,73 @@ Hire Me
 </div>
 
 
-<!-- ONLY KASHIF IMAGE -->
+<!-- VIDEO EDITOR STYLE VISUAL -->
 
-<div class="visual">
+<div class="visual"
+aria-label="Professional video editing workspace">
 
 <img
 class="hero-img"
 src="images/kashif.jpg"
-alt="Muhammad Kashif Saleem - KG Edits"
+alt="Muhammad Kashif Saleem, Founder of KG Edits"
+width="715"
+height="450"
 >
 
-<span class="float f1">
-✂️ Precision Editing
-</span>
+<div class="edit-bar">
 
-<span class="float f2">
-🎧 Audio & Sound
-</span>
+<div class="dots">
 
-<span class="float f3">
-✨ Creative Effects
-</span>
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+<div class="edit-title">
+KG EDITS — VIDEO PROJECT
+</div>
+
+</div>
+
+
+<div class="float f1">
+✂ Precision Editing
+</div>
+
+<div class="float f2">
+🎨 Color Grading
+</div>
+
+<div class="float f3">
+🎧 Audio Design
+</div>
+
+
+<div class="timeline-visual">
+
+<div class="time-line"></div>
+
+<div class="track">
+
+<div class="clip"></div>
+<div class="clip orange"></div>
+<div class="clip"></div>
+<div class="clip orange"></div>
+<div class="clip"></div>
+
+</div>
+
+<div class="track">
+
+<div class="clip orange"></div>
+<div class="clip"></div>
+<div class="clip orange"></div>
+<div class="clip"></div>
+
+</div>
+
+</div>
 
 </div>
 
@@ -746,7 +1385,9 @@ alt="Muhammad Kashif Saleem - KG Edits"
 </section>
 
 
-<!-- SERVICES -->
+<!-- =====================================================
+     SERVICES
+===================================================== -->
 
 <section id="services">
 
@@ -759,12 +1400,11 @@ What I Do
 </span>
 
 <h2>
-Editing Services
+Professional Editing Services
 </h2>
 
 <p>
-Creative editing built around your content,
-audience, and goals.
+Creative post-production for brands, creators and social media.
 </p>
 
 </div>
@@ -772,64 +1412,138 @@ audience, and goals.
 
 <div class="cards">
 
+
 <article class="card">
+
 <div class="icon">🎬</div>
-<h3>Video Editing</h3>
+
+<h3>
+Video Editing
+</h3>
+
 <p>
-Clean cuts, smooth transitions, storytelling,
-color correction, and polished video delivery.
+Clean cuts, storytelling, pacing, transitions, visual effects
+and professional video delivery.
 </p>
+
+<div class="color-strip">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+
 </article>
 
 
 <article class="card">
+
 <div class="icon">📱</div>
-<h3>Reels & Shorts</h3>
+
+<h3>
+Reels & Shorts
+</h3>
+
 <p>
-Vertical short-form content for TikTok,
-YouTube Shorts, Facebook, and Instagram.
+Vertical short-form content for TikTok, YouTube Shorts,
+Facebook and Instagram.
 </p>
+
 </article>
 
 
 <article class="card">
-<div class="icon">🎧</div>
-<h3>Audio Editing</h3>
-<p>
-Audio cleanup, volume balancing, music placement,
-and sound effects to improve clarity.
-</p>
-</article>
 
-
-<article class="card">
 <div class="icon">🎨</div>
-<h3>Color & Effects</h3>
+
+<h3>
+Color Grading
+</h3>
+
 <p>
-Creative color grading, visual effects,
-overlays, and motion accents.
+Cinematic color correction, color grading, contrast,
+highlights, shadows and creative looks.
 </p>
+
+<div class="color-strip">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+
 </article>
 
 
 <article class="card">
+
+<div class="icon">🎧</div>
+
+<h3>
+Audio & Sound Design
+</h3>
+
+<p>
+Audio cleanup, volume balancing, music, sound effects,
+whooshes, impacts and cinematic sound design.
+</p>
+
+<div class="wave">
+
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+</article>
+
+
+<article class="card">
+
 <div class="icon">▶️</div>
-<h3>YouTube Videos</h3>
+
+<h3>
+YouTube Videos
+</h3>
+
 <p>
-Structured edits, engaging pacing, subtitles,
-and supporting graphics for video content.
+Engaging pacing, subtitles, graphics, B-roll, sound design
+and professional storytelling for YouTube.
 </p>
+
 </article>
 
 
 <article class="card">
+
 <div class="icon">📢</div>
-<h3>Promotional Videos</h3>
+
+<h3>
+Promotional Videos
+</h3>
+
 <p>
-Video edits for brands, products, services,
-and social media campaigns.
+Professional video ads and promotional content for brands,
+products, services and social media campaigns.
 </p>
+
 </article>
+
 
 </div>
 
@@ -838,20 +1552,20 @@ and social media campaigns.
 </section>
 
 
-<!-- ABOUT -->
+<!-- =====================================================
+     ABOUT
+===================================================== -->
 
 <section class="about" id="about">
 
 <div class="container about-grid">
 
 
-<!-- ONLY KASHIF ABOUT IMAGE -->
-
-<div class="about-art">
+<div class="about-art has-img">
 
 <img
 src="images/kashif-about.jpg"
-alt="Muhammad Kashif Saleem - Founder of KG Edits"
+alt="Muhammad Kashif Saleem, Founder of KG Edits"
 loading="lazy"
 >
 
@@ -862,7 +1576,7 @@ Ideas into Impact.
 </strong>
 
 <span>
-Thoughtful cuts. Clear sound. Strong storytelling.
+Thoughtful cuts. Strong visuals. Clean sound.
 </span>
 
 </div>
@@ -882,41 +1596,45 @@ Founder and Owner of KG Edits.
 </h2>
 
 <p>
-I’m a <strong>Professional Video Editor,
-Creative Visual Designer, and AI Enthusiast.</strong>
-I create engaging and professional videos for
-YouTube, TikTok, Facebook, Instagram, and other
-social media platforms.
+I’m a Professional Video Editor, Creative Visual Designer,
+and AI Enthusiast. I create engaging and professional videos
+for YouTube, TikTok, Facebook, Instagram, and other social media platforms.
 </p>
 
 <p>
 My editing work includes
 <strong>
-video editing, reels & shorts,
-social media content, captions,
-transitions, color correction,
-color grading, audio enhancement,
-sound design, motion graphics,
+video editing, reels & shorts, social media content,
+captions, transitions, color correction, color grading,
+audio enhancement, sound design, motion graphics,
 and promotional videos.
 </strong>
 </p>
 
 <p>
-My goal is to turn raw footage and creative ideas
-into high-quality visual content that connects
-with audiences and delivers results.
+My goal is to turn raw footage and creative ideas into
+high-quality visual content that connects with audiences
+and delivers results.
 </p>
+
 
 <div class="skills">
 
-<span>Adobe Premiere Pro</span>
-<span>CapCut</span>
 <span>Video Editing</span>
-<span>Reels & Shorts</span>
+
 <span>Color Grading</span>
-<span>Motion Graphics</span>
-<span>AI Tools</span>
+
 <span>Audio Editing</span>
+
+<span>Sound Design</span>
+
+<span>Reels & Shorts</span>
+
+<span>Motion Graphics</span>
+
+<span>Transitions</span>
+
+<span>Storytelling</span>
 
 </div>
 
@@ -927,7 +1645,9 @@ with audiences and delivers results.
 </section>
 
 
-<!-- PORTFOLIO -->
+<!-- =====================================================
+     PORTFOLIO
+===================================================== -->
 
 <section class="projects" id="portfolio">
 
@@ -940,11 +1660,11 @@ Selected Work
 </span>
 
 <h2>
-My Portfolio
+My Video Editing Portfolio
 </h2>
 
 <p>
-Watch my selected editing projects directly on this website.
+A showcase of selected editing, sound design and creative projects.
 </p>
 
 </div>
@@ -963,6 +1683,7 @@ controls
 preload="metadata"
 playsinline
 poster="images/project1.jpg"
+aria-label="Play Auto Caption Tutorial"
 >
 
 <source
@@ -984,10 +1705,6 @@ Tutorial · Captions
 Auto Caption Tutorial
 </h3>
 
-<p>
-Caption editing and subtitle-focused video project.
-</p>
-
 </div>
 
 </article>
@@ -1003,6 +1720,7 @@ controls
 preload="metadata"
 playsinline
 poster="images/project2.jpg"
+aria-label="Play Color Grading in CapCut"
 >
 
 <source
@@ -1017,16 +1735,12 @@ Your browser does not support HTML video.
 <div class="project-body">
 
 <small>
-Tutorial · Color
+Color Grading · Color
 </small>
 
 <h3>
 Color Grading in CapCut
 </h3>
-
-<p>
-Creative color correction and grading demonstration.
-</p>
 
 </div>
 
@@ -1042,6 +1756,8 @@ class="project-video"
 controls
 preload="metadata"
 playsinline
+poster="images/project3.jpg"
+aria-label="Play Sound Design Essentials"
 >
 
 <source
@@ -1056,16 +1772,12 @@ Your browser does not support HTML video.
 <div class="project-body">
 
 <small>
-Sound Design
+Sound Design · Effects
 </small>
 
 <h3>
 Sound Design Essentials
 </h3>
-
-<p>
-Whoosh, boom, click, pop and zap sound effects.
-</p>
 
 </div>
 
@@ -1081,6 +1793,8 @@ class="project-video"
 controls
 preload="metadata"
 playsinline
+poster="images/project4.jpg"
+aria-label="Play Rare Transition Sound Effects"
 >
 
 <source
@@ -1102,10 +1816,6 @@ Sound Design · Transitions
 Rare Transition Sound Effects
 </h3>
 
-<p>
-Creative transition sound effects for modern edits.
-</p>
-
 </div>
 
 </article>
@@ -1120,6 +1830,8 @@ class="project-video"
 controls
 preload="metadata"
 playsinline
+poster="images/project5.jpg"
+aria-label="Play Minimalist Edit"
 >
 
 <source
@@ -1141,10 +1853,6 @@ Short-form Edit
 Minimalist Edit
 </h3>
 
-<p>
-Clean and modern short-form video editing.
-</p>
-
 </div>
 
 </article>
@@ -1159,6 +1867,8 @@ class="project-video"
 controls
 preload="metadata"
 playsinline
+poster="images/project6.jpg"
+aria-label="Play Free Editor Resource"
 >
 
 <source
@@ -1180,10 +1890,6 @@ Editor Resource
 Free Editor Resource
 </h3>
 
-<p>
-Useful creative resources for video editors.
-</p>
-
 </div>
 
 </article>
@@ -1196,7 +1902,9 @@ Useful creative resources for video editors.
 </section>
 
 
-<!-- EXPERIENCE -->
+<!-- =====================================================
+     EXPERIENCE
+===================================================== -->
 
 <section class="experience" id="experience">
 
@@ -1229,9 +1937,8 @@ Video Editor
 </div>
 
 <p class="muted">
-Creating edited videos for ElevateXCrew,
-including creative editing, storytelling visuals,
-and social media content.
+Creating edited videos for ElevateXCrew, from creative
+editing and storytelling visuals to fast and reliable delivery.
 </p>
 
 </article>
@@ -1248,8 +1955,7 @@ Video Editor
 </div>
 
 <p class="muted">
-Video editing experience and practical learning
-focused on creative digital content.
+Video editing experience and creative production work.
 </p>
 
 </article>
@@ -1266,9 +1972,8 @@ Student Intern
 </div>
 
 <p class="muted">
-Student internship experience with learning
-focused on Artificial Intelligence, AI tools,
-automation, and prompt engineering.
+Student internship experience with learning in Artificial
+Intelligence, AI tools, automation and prompt engineering.
 </p>
 
 </article>
@@ -1281,7 +1986,9 @@ automation, and prompt engineering.
 </section>
 
 
-<!-- CONTACT -->
+<!-- =====================================================
+     CONTACT
+===================================================== -->
 
 <section class="contact" id="contact">
 
@@ -1299,14 +2006,14 @@ Have a video to edit?
 </h2>
 
 <p class="muted">
-Let's discuss your project.
-Contact KG Edits for video editing,
-audio cleanup, reels, shorts,
-YouTube videos, and social media content.
+Let's discuss your project. Contact KG Edits for video editing,
+color grading, audio cleanup, reels, shorts, YouTube videos
+and social media content.
 </p>
 
 
 <div class="contact-list">
+
 
 <div class="contact-item">
 
@@ -1329,10 +2036,12 @@ kgeditsofficial642@gmail.com
 
 </div>
 
+
 </div>
 
 
 <div class="socials">
+
 
 <a
 class="social"
@@ -1363,6 +2072,7 @@ rel="noopener noreferrer"
 YouTube ↗
 </a>
 
+
 </div>
 
 </div>
@@ -1375,8 +2085,8 @@ Ready to start your project?
 </h3>
 
 <p>
-Send me an email with your video idea,
-preferred style, deadline, and reference links.
+Send me an email with your video idea, preferred style,
+deadline and any reference links.
 </p>
 
 
@@ -1389,7 +2099,7 @@ Email Me About Your Project ↗
 
 
 <p class="note">
-Or contact me directly through WhatsApp.
+For WhatsApp, use the contact number shown on this page.
 </p>
 
 
@@ -1408,10 +2118,13 @@ Message on WhatsApp
 
 </section>
 
+
 </main>
 
 
-<!-- FOOTER -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
@@ -1422,12 +2135,11 @@ KG <span>Edits.</span>
 </a>
 
 <small>
-© <span id="year"></span> KG Edits.
-All rights reserved.
+© <span id="year"></span> KG Edits. All rights reserved.
 </small>
 
 <small>
-Video Editing • Creative Design • AI
+Video Editing • Color Grading • Audio • Creative Content
 </small>
 
 </div>
@@ -1442,6 +2154,6 @@ new Date().getFullYear();
 
 </script>
 
+
 </body>
 </html>
-```
