@@ -1,12 +1,17 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KG Edits | Video & Audio Editor</title>
-<meta name="description" content="KG Edits — Professional video editing, audio editing, reels, shorts, social media videos and creative content.">
+
+<title>KG Edits | Professional Video Editor</title>
+
+<meta name="description"
+content="KG Edits — Professional Video Editor, Creative Visual Designer and AI Enthusiast. Video editing, reels, shorts, YouTube videos, audio editing and creative content.">
+
 <style>
-:root {
+:root{
   --bg:#f6f7ff;
   --ink:#17172f;
   --purple:#7048ff;
@@ -16,295 +21,1427 @@
   --orange:#ff9d32;
   --white:#ffffff;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
-a{text-decoration:none;color:inherit}
-button,a{transition:.25s}
-.container{width:min(1120px,90%);margin:auto}
-header{position:sticky;top:0;z-index:10;background:#ffffffed;backdrop-filter:blur(14px);border-bottom:1px solid #e8e5ff}
-.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{font-size:27px;font-weight:900;letter-spacing:-1px;color:var(--purple)}
-.logo span{color:var(--pink)}
-nav{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
-nav a{font-size:14px;font-weight:700}
-nav a:hover{color:var(--purple)}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:12px;font-weight:800;border:0;cursor:pointer}
-.btn-primary{background:linear-gradient(110deg,var(--purple),var(--blue));color:white;box-shadow:0 8px 22px #7048ff35}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 26px #7048ff45}
-.btn-light{background:white;border:1px solid #e5e0ff;color:var(--ink)}
-.hero{padding:95px 0 80px;overflow:hidden;background:radial-gradient(ellipse at 90% 10%,#dcd4ff 0,transparent 35%),radial-gradient(ellipse at 0 80%,#c9f8f8 0,transparent 32%),var(--bg)}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
-.tag{display:inline-block;padding:7px 13px;border-radius:99px;background:#e8e1ff;color:#5630dc;font-weight:800;font-size:12px;letter-spacing:1px}
-h1{font-size:clamp(42px,6vw,72px);line-height:1.08;letter-spacing:-2.5px;margin:20px 0}
-.gradient{background:linear-gradient(100deg,var(--purple),var(--pink),var(--orange));background-clip:text;-webkit-background-clip:text;color:transparent}
-.hero p{max-width:610px;color:#5d5d77;font-size:17px;margin-bottom:25px}
-.actions{display:flex;gap:12px;flex-wrap:wrap}
-.visual{min-height:350px;border-radius:30px;background:linear-gradient(145deg,#7048ff,#268bff 55%,#00bfc8);padding:25px;position:relative;box-shadow:0 25px 60px #7048ff30;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.visual:before,.visual:after{display:none}
-.visual{aspect-ratio:715/374;min-height:0;padding:0}
-.visual .float{display:none}
-.visual:before,.visual:after{content:"";position:absolute;border:1px solid #ffffff60;border-radius:50%}
-.visual:before{width:300px;height:300px}
-.visual:after{width:220px;height:220px}
-.play{position:relative;z-index:1;width:95px;height:95px;border-radius:50%;background:#ffffffed;color:var(--purple);display:grid;place-items:center;font-size:37px;box-shadow:0 10px 30px #1c176755}
-.float{position:absolute;background:#ffffffee;padding:12px 15px;border-radius:14px;font-weight:800;font-size:13px;box-shadow:0 10px 25px #16103b20}
-.f1{top:24px;left:20px}.f2{bottom:25px;right:20px}.f3{bottom:100px;left:15px}
-section{padding:82px 0}
-.section-head{text-align:center;margin-bottom:40px}
-.eyebrow{text-transform:uppercase;font-size:12px;letter-spacing:2px;font-weight:900;color:var(--purple)}
-h2{font-size:clamp(30px,4vw,44px);line-height:1.2;margin:8px 0 12px;letter-spacing:-1px}
-.section-head p,.muted{color:#686880}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:white;border:1px solid #e9e6fa;border-radius:20px;padding:25px;box-shadow:0 8px 25px #21135b06}
-.card:hover{transform:translateY(-5px);box-shadow:0 15px 35px #21135b12}
-.icon{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;font-size:25px;margin-bottom:16px;background:#ece5ff}
-.card:nth-child(2) .icon{background:#ffe2ef}
-.card:nth-child(3) .icon{background:#d9f9f7}
-.card h3{margin-bottom:8px;font-size:20px}
-.card p{color:#686880;font-size:14px}
-.about{background:white}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-.about-art{min-height:300px;border-radius:25px;padding:30px;background:linear-gradient(135deg,#e5dcff,#d8fbff);display:flex;flex-direction:column;justify-content:center}
-.about-art strong{font-size:42px;line-height:1.1;color:var(--purple)}
-.about-art span{margin-top:12px;color:#555574}
-.about-copy p{margin:15px 0;color:#686880}
-.skills{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
-.skills span{padding:8px 12px;background:#eee9ff;border-radius:10px;color:#5630dc;font-weight:700;font-size:13px}
-.projects{background:linear-gradient(180deg,#f6f7ff,#eeebff)}
-.project{padding:0;overflow:hidden}
-.project-cover{min-height:155px;display:grid;place-items:center;font-size:42px;color:white;font-weight:900;letter-spacing:-1px}
-.project-video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#17172f}
-.project-body p{margin-top:4px}
-.visual img.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
-.visual:before,.visual:after{z-index:1}
-.float{z-index:2}
-.about-art.has-img{padding:0;overflow:hidden;position:relative;min-height:0;aspect-ratio:715/953;width:100%;max-width:420px;margin:auto}
-.about-art.has-img img{width:100%;height:100%;object-fit:cover;object-position:center top;position:absolute;inset:0}
-.about-art.has-img .cap{position:absolute;left:0;right:0;bottom:0;padding:60px 26px 24px;background:linear-gradient(transparent,#17172fd9);color:#fff}
-.about-art.has-img .cap strong{color:#fff;font-size:30px;display:block}
-.about-art.has-img .cap span{color:#e7e3ff;margin:0}
-.c1{background:linear-gradient(135deg,#7048ff,#ff4fa3)}
-.c2{background:linear-gradient(135deg,#00a9b7,#268bff)}
-.c3{background:linear-gradient(135deg,#ff9d32,#ff4f72)}
-.project-body{padding:22px}
-.project-body small{color:var(--purple);font-weight:900;text-transform:uppercase;letter-spacing:1px}
-.project-body h3{margin:5px 0}
-.note{font-size:12px;color:#77758c;margin-top:12px}
-.experience{background:white}
-.timeline{max-width:760px;margin:auto;display:grid;gap:18px}
-.job{padding:23px;border-left:4px solid var(--purple);border-radius:0 15px 15px 0;background:#f7f5ff}
-.job h3{font-size:19px}.job .role{font-weight:800;color:var(--purple)}
-.contact{background:linear-gradient(125deg,#e9e1ff,#e0faff)}
-.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px;align-items:start}
-.contact-list{display:grid;gap:12px;margin-top:22px}
-.contact-item{background:white;border-radius:14px;padding:15px;overflow-wrap:anywhere}
-.contact-item strong{display:block;color:var(--purple);font-size:12px;text-transform:uppercase;letter-spacing:1px}
-.socials{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
-.social{padding:10px 14px;border-radius:10px;background:white;font-weight:800;border:1px solid #e4defa}
-.social:hover{background:var(--purple);color:white}
-.contact-box{background:white;padding:28px;border-radius:22px;box-shadow:0 12px 35px #29166d0b}
-.contact-box p{color:#686880;margin-bottom:20px}
-footer{background:#19172f;color:#eae8ff;padding:28px 0}
-.footer-row{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
-footer small{color:#b7b3d1}
-footer a{color:#d3c6ff}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:90px;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.7;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button,a{
+  transition:.25s;
+}
+
+.container{
+  width:min(1120px,90%);
+  margin:auto;
+}
+
+/* NAVIGATION */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:#ffffffed;
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid #e8e5ff;
+}
+
+.nav{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  font-size:27px;
+  font-weight:900;
+  letter-spacing:-1px;
+  color:var(--purple);
+}
+
+.logo span{
+  color:var(--pink);
+}
+
+nav{
+  display:flex;
+  gap:22px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+nav a{
+  font-size:14px;
+  font-weight:700;
+}
+
+nav a:hover{
+  color:var(--purple);
+}
+
+/* BUTTONS */
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 20px;
+  border-radius:12px;
+  font-weight:800;
+  border:0;
+  cursor:pointer;
+}
+
+.btn-primary{
+  background:linear-gradient(110deg,var(--purple),var(--blue));
+  color:white;
+  box-shadow:0 8px 22px #7048ff35;
+}
+
+.btn-primary:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 26px #7048ff45;
+}
+
+.btn-light{
+  background:white;
+  border:1px solid #e5e0ff;
+  color:var(--ink);
+}
+
+.btn-light:hover{
+  border-color:var(--purple);
+  color:var(--purple);
+}
+
+/* HERO */
+
+.hero{
+  padding:95px 0 80px;
+  overflow:hidden;
+  background:
+  radial-gradient(ellipse at 90% 10%,#dcd4ff 0,transparent 35%),
+  radial-gradient(ellipse at 0 80%,#c9f8f8 0,transparent 32%),
+  var(--bg);
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:50px;
+  align-items:center;
+}
+
+.tag{
+  display:inline-block;
+  padding:7px 13px;
+  border-radius:99px;
+  background:#e8e1ff;
+  color:#5630dc;
+  font-weight:800;
+  font-size:12px;
+  letter-spacing:1px;
+}
+
+h1{
+  font-size:clamp(42px,6vw,72px);
+  line-height:1.08;
+  letter-spacing:-2.5px;
+  margin:20px 0;
+}
+
+.gradient{
+  background:linear-gradient(
+    100deg,
+    var(--purple),
+    var(--pink),
+    var(--orange)
+  );
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.hero p{
+  max-width:610px;
+  color:#5d5d77;
+  font-size:17px;
+  margin-bottom:25px;
+}
+
+.actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+/* HERO IMAGE */
+
+.visual{
+  aspect-ratio:715/500;
+  border-radius:30px;
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(
+    145deg,
+    #7048ff,
+    #268bff 55%,
+    #00bfc8
+  );
+  box-shadow:0 25px 60px #7048ff30;
+}
+
+.hero-img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:1;
+}
+
+.visual::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    180deg,
+    transparent 55%,
+    #17172f80
+  );
+  z-index:2;
+}
+
+.float{
+  position:absolute;
+  z-index:3;
+  background:#ffffffed;
+  padding:12px 15px;
+  border-radius:14px;
+  font-weight:800;
+  font-size:13px;
+  box-shadow:0 10px 25px #16103b20;
+}
+
+.f1{
+  top:20px;
+  left:20px;
+}
+
+.f2{
+  bottom:20px;
+  right:20px;
+}
+
+.f3{
+  bottom:95px;
+  left:20px;
+}
+
+/* SECTIONS */
+
+section{
+  padding:82px 0;
+}
+
+.section-head{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.eyebrow{
+  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:2px;
+  font-weight:900;
+  color:var(--purple);
+}
+
+h2{
+  font-size:clamp(30px,4vw,44px);
+  line-height:1.2;
+  margin:8px 0 12px;
+  letter-spacing:-1px;
+}
+
+.section-head p,
+.muted{
+  color:#686880;
+}
+
+/* SERVICES */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card{
+  background:white;
+  border:1px solid #e9e6fa;
+  border-radius:20px;
+  padding:25px;
+  box-shadow:0 8px 25px #21135b06;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px #21135b12;
+}
+
+.icon{
+  width:52px;
+  height:52px;
+  border-radius:15px;
+  display:grid;
+  place-items:center;
+  font-size:25px;
+  margin-bottom:16px;
+  background:#ece5ff;
+}
+
+.card:nth-child(2) .icon{
+  background:#ffe2ef;
+}
+
+.card:nth-child(3) .icon{
+  background:#d9f9f7;
+}
+
+.card h3{
+  margin-bottom:8px;
+  font-size:20px;
+}
+
+.card p{
+  color:#686880;
+  font-size:14px;
+}
+
+/* ABOUT */
+
+.about{
+  background:white;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.about-art{
+  overflow:hidden;
+  position:relative;
+  border-radius:25px;
+  aspect-ratio:715/953;
+  width:100%;
+  max-width:420px;
+  margin:auto;
+  background:#e5dcff;
+}
+
+.about-art img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.about-art .cap{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:70px 26px 24px;
+  background:linear-gradient(
+    transparent,
+    #17172fe8
+  );
+  color:white;
+}
+
+.about-art .cap strong{
+  display:block;
+  font-size:30px;
+}
+
+.about-art .cap span{
+  color:#e7e3ff;
+}
+
+.about-copy p{
+  margin:15px 0;
+  color:#686880;
+}
+
+.skills{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:22px;
+}
+
+.skills span{
+  padding:8px 12px;
+  background:#eee9ff;
+  border-radius:10px;
+  color:#5630dc;
+  font-weight:700;
+  font-size:13px;
+}
+
+/* PORTFOLIO */
+
+.projects{
+  background:linear-gradient(
+    180deg,
+    #f6f7ff,
+    #eeebff
+  );
+}
+
+.project{
+  padding:0;
+  overflow:hidden;
+}
+
+.project-video{
+  display:block;
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:contain;
+  background:#17172f;
+}
+
+.project-body{
+  padding:22px;
+}
+
+.project-body small{
+  color:var(--purple);
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.project-body h3{
+  margin:5px 0;
+}
+
+.project-body p{
+  color:#686880;
+  font-size:14px;
+}
+
+/* EXPERIENCE */
+
+.experience{
+  background:white;
+}
+
+.timeline{
+  max-width:760px;
+  margin:auto;
+  display:grid;
+  gap:18px;
+}
+
+.job{
+  padding:23px;
+  border-left:4px solid var(--purple);
+  border-radius:0 15px 15px 0;
+  background:#f7f5ff;
+}
+
+.job h3{
+  font-size:19px;
+}
+
+.job .role{
+  font-weight:800;
+  color:var(--purple);
+}
+
+/* CONTACT */
+
+.contact{
+  background:linear-gradient(
+    125deg,
+    #e9e1ff,
+    #e0faff
+  );
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:35px;
+  align-items:start;
+}
+
+.contact-list{
+  display:grid;
+  gap:12px;
+  margin-top:22px;
+}
+
+.contact-item{
+  background:white;
+  border-radius:14px;
+  padding:15px;
+  overflow-wrap:anywhere;
+}
+
+.contact-item strong{
+  display:block;
+  color:var(--purple);
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.socials{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:20px;
+}
+
+.social{
+  padding:10px 14px;
+  border-radius:10px;
+  background:white;
+  font-weight:800;
+  border:1px solid #e4defa;
+}
+
+.social:hover{
+  background:var(--purple);
+  color:white;
+}
+
+.contact-box{
+  background:white;
+  padding:28px;
+  border-radius:22px;
+  box-shadow:0 12px 35px #29166d0b;
+}
+
+.contact-box p{
+  color:#686880;
+  margin:12px 0 20px;
+}
+
+.contact-box .btn{
+  margin:5px 5px 5px 0;
+}
+
+.note{
+  font-size:12px;
+  color:#77758c;
+}
+
+/* FOOTER */
+
+footer{
+  background:#19172f;
+  color:#eae8ff;
+  padding:28px 0;
+}
+
+.footer-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+footer small{
+  color:#b7b3d1;
+}
+
+/* MOBILE */
+
 @media(max-width:800px){
- .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
- .cards{grid-template-columns:repeat(2,1fr)}
- .hero{padding-top:60px}
- .visual{min-height:0}
- nav{gap:12px}
+
+  .hero-grid,
+  .about-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .cards{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .hero{
+    padding-top:60px;
+  }
+
+  nav{
+    gap:12px;
+  }
+
 }
+
 @media(max-width:560px){
- .nav{height:auto;min-height:75px;align-items:flex-start;padding:15px 0;flex-direction:column}
- nav{gap:10px 15px}
- nav a{font-size:12px}
- .cards{grid-template-columns:1fr}
- section{padding:60px 0}
- h1{letter-spacing:-1.5px}
- .visual{min-height:0}
+
+  .nav{
+    min-height:75px;
+    padding:15px 0;
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  nav{
+    gap:10px 15px;
+  }
+
+  nav a{
+    font-size:12px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  section{
+    padding:60px 0;
+  }
+
+  h1{
+    letter-spacing:-1.5px;
+  }
+
+  .float{
+    font-size:11px;
+    padding:9px 11px;
+  }
+
 }
+
 </style>
 </head>
+
 <body>
+
+<!-- HEADER -->
+
 <header>
-  <div class="container nav">
-    <a class="logo" href="#home">KG <span>Edits.</span></a>
-    <nav aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
+
+<div class="container nav">
+
+<a class="logo" href="#home">
+KG <span>Edits.</span>
+</a>
+
+<nav aria-label="Main navigation">
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#experience">Experience</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
+
 </header>
 
+
 <main>
+
+<!-- HERO -->
+
 <section class="hero" id="home">
-  <div class="container hero-grid">
-    <div>
-      <span class="tag">VIDEO EDITING • AUDIO • CREATIVE CONTENT</span>
-      <h1>Make Every Frame <span class="gradient">Count.</span></h1>
-      <p>Hi, I'm <strong>KG Edits</strong> — a video editor focused on creating engaging videos, social media reels, YouTube content, clean audio, and polished visual stories that connect with audiences.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="#portfolio">Explore My Work ↗</a>
-        <a class="btn btn-light" href="#contact">Hire Me</a>
-      </div>
-    </div>
-    <div class="visual" aria-label="Creative editing illustration">
-      <span class="float f1">✂️ Precision Editing</span>
-      <img class="hero-img" src="images/kashif.jpg" alt="Muhammad Kashif Saleem, Founder of KG Edits" width="715" height="374">
-      <span class="float f2">🎧 Audio & Sound</span>
-      <span class="float f3">✨ Creative Effects</span>
-    </div>
-  </div>
+
+<div class="container hero-grid">
+
+<div>
+
+<span class="tag">
+VIDEO EDITOR • VISUAL DESIGNER • AI ENTHUSIAST
+</span>
+
+<h1>
+Make Every Frame
+<span class="gradient">Count.</span>
+</h1>
+
+<p>
+Hi, I'm <strong>Muhammad Kashif Saleem</strong> —
+Professional Video Editor, Creative Visual Designer,
+and AI Enthusiast behind <strong>KG Edits</strong>.
+I create engaging videos, social media reels,
+YouTube content, clean audio, and polished visual stories.
+</p>
+
+<div class="actions">
+
+<a class="btn btn-primary" href="#portfolio">
+Explore My Work ↗
+</a>
+
+<a class="btn btn-light" href="#contact">
+Hire Me
+</a>
+
+</div>
+
+</div>
+
+
+<!-- ONLY KASHIF IMAGE -->
+
+<div class="visual">
+
+<img
+class="hero-img"
+src="images/kashif.jpg"
+alt="Muhammad Kashif Saleem - KG Edits"
+>
+
+<span class="float f1">
+✂️ Precision Editing
+</span>
+
+<span class="float f2">
+🎧 Audio & Sound
+</span>
+
+<span class="float f3">
+✨ Creative Effects
+</span>
+
+</div>
+
+</div>
+
 </section>
+
+
+<!-- SERVICES -->
 
 <section id="services">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">What I Do</span>
-      <h2>Editing Services</h2>
-      <p>Creative editing built around your content, audience, and goals.</p>
-    </div>
-    <div class="cards">
-      <article class="card"><div class="icon">🎬</div><h3>Video Editing</h3><p>Clean cuts, smooth transitions, storytelling, color correction, and polished video delivery.</p></article>
-      <article class="card"><div class="icon">📱</div><h3>Reels & Shorts</h3><p>Vertical short-form content for TikTok, YouTube Shorts, Facebook, and Instagram.</p></article>
-      <article class="card"><div class="icon">🎧</div><h3>Audio Editing</h3><p>Audio cleanup, volume balancing, music placement, and sound effects to improve clarity.</p></article>
-      <article class="card"><div class="icon">🎨</div><h3>Color & Effects</h3><p>Creative color grading, visual effects, overlays, and motion accents where needed.</p></article>
-      <article class="card"><div class="icon">▶️</div><h3>YouTube Videos</h3><p>Structured edits, engaging pacing, subtitles, and supporting graphics for video content.</p></article>
-      <article class="card"><div class="icon">📢</div><h3>Promotional Videos</h3><p>Video edits for brands, products, services, and social media campaigns.</p></article>
-    </div>
-  </div>
+
+<div class="container">
+
+<div class="section-head">
+
+<span class="eyebrow">
+What I Do
+</span>
+
+<h2>
+Editing Services
+</h2>
+
+<p>
+Creative editing built around your content,
+audience, and goals.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<article class="card">
+<div class="icon">🎬</div>
+<h3>Video Editing</h3>
+<p>
+Clean cuts, smooth transitions, storytelling,
+color correction, and polished video delivery.
+</p>
+</article>
+
+
+<article class="card">
+<div class="icon">📱</div>
+<h3>Reels & Shorts</h3>
+<p>
+Vertical short-form content for TikTok,
+YouTube Shorts, Facebook, and Instagram.
+</p>
+</article>
+
+
+<article class="card">
+<div class="icon">🎧</div>
+<h3>Audio Editing</h3>
+<p>
+Audio cleanup, volume balancing, music placement,
+and sound effects to improve clarity.
+</p>
+</article>
+
+
+<article class="card">
+<div class="icon">🎨</div>
+<h3>Color & Effects</h3>
+<p>
+Creative color grading, visual effects,
+overlays, and motion accents.
+</p>
+</article>
+
+
+<article class="card">
+<div class="icon">▶️</div>
+<h3>YouTube Videos</h3>
+<p>
+Structured edits, engaging pacing, subtitles,
+and supporting graphics for video content.
+</p>
+</article>
+
+
+<article class="card">
+<div class="icon">📢</div>
+<h3>Promotional Videos</h3>
+<p>
+Video edits for brands, products, services,
+and social media campaigns.
+</p>
+</article>
+
+</div>
+
+</div>
+
 </section>
+
+
+<!-- ABOUT -->
 
 <section class="about" id="about">
-  <div class="container about-grid">
-    <div class="about-art has-img">
-      <img src="images/kashif-about.jpg" alt="Muhammad Kashif Saleem, Founder of KG Edits" loading="lazy">
-      <div class="cap"><strong>Ideas into Impact.</strong><span>Thoughtful cuts. Clear sound. Strong storytelling.</span></div>
-    </div>
-    <div class="about-copy">
-      <span class="eyebrow">About Me</span>
-      <h2>I'm Muhammad Kashif Saleem, Founder and Owner of KG Edits.</h2>
-      <p>I’m a Professional Video Editor, Creative Visual Designer, and AI Enthusiast. I create engaging and professional videos for YouTube, TikTok, Facebook, Instagram, and other social media platforms.</p>
-      <p>My editing work includes <strong>video editing, reels &amp; shorts, social media content, captions, transitions, color correction, color grading, audio enhancement, sound design, motion graphics, and promotional videos.</strong></p>
-      <p>My goal is to turn raw footage and creative ideas into high-quality visual content that connects with audiences and delivers results.</p>
-      <div class="skills">
-        <span>Video Editing</span><span>Audio Cleanup</span><span>Reels & Shorts</span>
-        <span>Transitions</span><span>Color Correction</span><span>Storytelling</span>
-      </div>
-    </div>
-  </div>
+
+<div class="container about-grid">
+
+
+<!-- ONLY KASHIF ABOUT IMAGE -->
+
+<div class="about-art">
+
+<img
+src="images/kashif-about.jpg"
+alt="Muhammad Kashif Saleem - Founder of KG Edits"
+loading="lazy"
+>
+
+<div class="cap">
+
+<strong>
+Ideas into Impact.
+</strong>
+
+<span>
+Thoughtful cuts. Clear sound. Strong storytelling.
+</span>
+
+</div>
+
+</div>
+
+
+<div class="about-copy">
+
+<span class="eyebrow">
+About Me
+</span>
+
+<h2>
+I'm Muhammad Kashif Saleem,
+Founder and Owner of KG Edits.
+</h2>
+
+<p>
+I’m a <strong>Professional Video Editor,
+Creative Visual Designer, and AI Enthusiast.</strong>
+I create engaging and professional videos for
+YouTube, TikTok, Facebook, Instagram, and other
+social media platforms.
+</p>
+
+<p>
+My editing work includes
+<strong>
+video editing, reels & shorts,
+social media content, captions,
+transitions, color correction,
+color grading, audio enhancement,
+sound design, motion graphics,
+and promotional videos.
+</strong>
+</p>
+
+<p>
+My goal is to turn raw footage and creative ideas
+into high-quality visual content that connects
+with audiences and delivers results.
+</p>
+
+<div class="skills">
+
+<span>Adobe Premiere Pro</span>
+<span>CapCut</span>
+<span>Video Editing</span>
+<span>Reels & Shorts</span>
+<span>Color Grading</span>
+<span>Motion Graphics</span>
+<span>AI Tools</span>
+<span>Audio Editing</span>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
+
+
+<!-- PORTFOLIO -->
 
 <section class="projects" id="portfolio">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Selected Work</span>
-      <h2>My Portfolio</h2>
-      <p>A showcase of selected video editing projects.</p>
-    </div>
-    <div class="cards">
-      <article class="card project">
-        <video class="project-video" controls preload="metadata" playsinline poster="images/project1.jpg" aria-label="Play Auto Caption Tutorial">
-          <source src="videos/project1.mp4" type="video/mp4">
-          Your browser does not support HTML video.
-        </video>
-        <div class="project-body"><small>Tutorial · Captions</small><h3>Auto Caption Tutorial</h3></div>
-      </article>
-      <article class="card project">
-        <video class="project-video" controls preload="metadata" playsinline poster="images/project2.jpg" aria-label="Play Color Grading in CapCut">
-          <source src="videos/project2.mp4" type="video/mp4">
-          Your browser does not support HTML video.
-        </video>
-        <div class="project-body"><small>Tutorial · Color</small><h3>Color Grading in CapCut</h3></div>
-      </article>
-      <article class="card project">
-        <video class="project-video" controls preload="metadata" playsinline poster="images/project3.jpg" aria-label="Play Sound Design Essentials">
-          <source src="videos/project3.mp4" type="video/mp4">
-          Your browser does not support HTML video.
-        </video>
-        <div class="project-body"><small>Sound design · Whoosh, Boom, Click, Pop, Zap</small><h3>Sound Design Essentials</h3></div>
-      </article>
-      <article class="card project">
-        <video class="project-video" controls preload="metadata" playsinline poster="images/project4.jpg" aria-label="Play Rare Transition Sound Effects">
-          <source src="videos/project4.mp4" type="video/mp4">
-          Your browser does not support HTML video.
-        </video>
-        <div class="project-body"><small>Sound design · Transitions</small><h3>Rare Transition Sound Effects</h3></div>
-      </article>
-      <article class="card project">
-        <video class="project-video" controls preload="metadata" playsinline poster="images/project5.jpg" aria-label="Play Minimalist Edit">
-          <source src="videos/project5.mp4" type="video/mp4">
-          Your browser does not support HTML video.
-        </video>
-        <div class="project-body"><small>Short-form edit</small><h3>Minimalist Edit</h3></div>
-      </article>
-      <article class="card project">
-        <video class="project-video" controls preload="metadata" playsinline poster="images/project6.jpg" aria-label="Play Free Editor Resource">
-          <source src="videos/project6.mp4" type="video/mp4">
-          Your browser does not support HTML video.
-        </video>
-        <div class="project-body"><small>Editor resource</small><h3>Free Editor Resource</h3></div>
-      </article>
-    </div>
-  </div>
+
+<div class="container">
+
+<div class="section-head">
+
+<span class="eyebrow">
+Selected Work
+</span>
+
+<h2>
+My Portfolio
+</h2>
+
+<p>
+Watch my selected editing projects directly on this website.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+
+<!-- PROJECT 1 -->
+
+<article class="card project">
+
+<video
+class="project-video"
+controls
+preload="metadata"
+playsinline
+poster="images/project1.jpg"
+>
+
+<source
+src="videos/project1.mp4"
+type="video/mp4"
+>
+
+Your browser does not support HTML video.
+
+</video>
+
+<div class="project-body">
+
+<small>
+Tutorial · Captions
+</small>
+
+<h3>
+Auto Caption Tutorial
+</h3>
+
+<p>
+Caption editing and subtitle-focused video project.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- PROJECT 2 -->
+
+<article class="card project">
+
+<video
+class="project-video"
+controls
+preload="metadata"
+playsinline
+poster="images/project2.jpg"
+>
+
+<source
+src="videos/project2.mp4"
+type="video/mp4"
+>
+
+Your browser does not support HTML video.
+
+</video>
+
+<div class="project-body">
+
+<small>
+Tutorial · Color
+</small>
+
+<h3>
+Color Grading in CapCut
+</h3>
+
+<p>
+Creative color correction and grading demonstration.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- PROJECT 3 -->
+
+<article class="card project">
+
+<video
+class="project-video"
+controls
+preload="metadata"
+playsinline
+>
+
+<source
+src="videos/project3.mp4"
+type="video/mp4"
+>
+
+Your browser does not support HTML video.
+
+</video>
+
+<div class="project-body">
+
+<small>
+Sound Design
+</small>
+
+<h3>
+Sound Design Essentials
+</h3>
+
+<p>
+Whoosh, boom, click, pop and zap sound effects.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- PROJECT 4 -->
+
+<article class="card project">
+
+<video
+class="project-video"
+controls
+preload="metadata"
+playsinline
+>
+
+<source
+src="videos/project4.mp4"
+type="video/mp4"
+>
+
+Your browser does not support HTML video.
+
+</video>
+
+<div class="project-body">
+
+<small>
+Sound Design · Transitions
+</small>
+
+<h3>
+Rare Transition Sound Effects
+</h3>
+
+<p>
+Creative transition sound effects for modern edits.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- PROJECT 5 -->
+
+<article class="card project">
+
+<video
+class="project-video"
+controls
+preload="metadata"
+playsinline
+>
+
+<source
+src="videos/project5.mp4"
+type="video/mp4"
+>
+
+Your browser does not support HTML video.
+
+</video>
+
+<div class="project-body">
+
+<small>
+Short-form Edit
+</small>
+
+<h3>
+Minimalist Edit
+</h3>
+
+<p>
+Clean and modern short-form video editing.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- PROJECT 6 -->
+
+<article class="card project">
+
+<video
+class="project-video"
+controls
+preload="metadata"
+playsinline
+>
+
+<source
+src="videos/project6.mp4"
+type="video/mp4"
+>
+
+Your browser does not support HTML video.
+
+</video>
+
+<div class="project-body">
+
+<small>
+Editor Resource
+</small>
+
+<h3>
+Free Editor Resource
+</h3>
+
+<p>
+Useful creative resources for video editors.
+</p>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
 </section>
+
+
+<!-- EXPERIENCE -->
 
 <section class="experience" id="experience">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">My Journey</span>
-      <h2>Experience & Background</h2>
-    </div>
-    <div class="timeline">
-      <article class="job"><h3>ElevateXCrew</h3><div class="role">Video Editor</div><p class="muted">Creating edited videos for ElevateXCrew, from creative editing and storytelling visuals to fast, reliable delivery.</p></article>
-      <article class="job"><h3>M Tech Expert Solution</h3><div class="role">Video Editor</div></article>
-      <article class="job"><h3>Akhuwat</h3><div class="role">Student Intern</div><p class="muted">Internship experience as a student intern.</p></article>
-    </div>
-  </div>
+
+<div class="container">
+
+<div class="section-head">
+
+<span class="eyebrow">
+My Journey
+</span>
+
+<h2>
+Experience & Background
+</h2>
+
+</div>
+
+
+<div class="timeline">
+
+
+<article class="job">
+
+<h3>
+ElevateXCrew
+</h3>
+
+<div class="role">
+Video Editor
+</div>
+
+<p class="muted">
+Creating edited videos for ElevateXCrew,
+including creative editing, storytelling visuals,
+and social media content.
+</p>
+
+</article>
+
+
+<article class="job">
+
+<h3>
+M Tech Expert Solution
+</h3>
+
+<div class="role">
+Video Editor
+</div>
+
+<p class="muted">
+Video editing experience and practical learning
+focused on creative digital content.
+</p>
+
+</article>
+
+
+<article class="job">
+
+<h3>
+Akhuwat
+</h3>
+
+<div class="role">
+Student Intern
+</div>
+
+<p class="muted">
+Student internship experience with learning
+focused on Artificial Intelligence, AI tools,
+automation, and prompt engineering.
+</p>
+
+</article>
+
+
+</div>
+
+</div>
+
 </section>
+
+
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
-  <div class="container contact-grid">
-    <div>
-      <span class="eyebrow">Let's Work Together</span>
-      <h2>Have a video to edit?</h2>
-      <p class="muted">Let's discuss your project. Contact KG Edits for video editing, audio cleanup, reels, shorts, and social media content.</p>
-      <div class="contact-list">
-        <div class="contact-item"><strong>Phone / WhatsApp</strong>03263658254</div>
-        <div class="contact-item"><strong>Email</strong>kgeditsofficial642@gmail.com</div>
-      </div>
-      <div class="socials">
-        <a class="social" href="https://www.facebook.com/profile.php?id=61595102123715" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
-        <a class="social" href="https://www.tiktok.com/@kgedits04" target="_blank" rel="noopener noreferrer">TikTok ↗</a>
-        <a class="social" href="https://www.youtube.com/@KGEDITS-09" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
-      </div>
-    </div>
-    <div class="contact-box">
-      <h3>Ready to start your project?</h3>
-      <p>Send me an email with your video idea, preferred style, deadline, and any reference links.</p>
-      <a class="btn btn-primary" href="mailto:kgeditsofficial642@gmail.com?subject=Video%20Editing%20Project">Email Me About Your Project ↗</a>
-      <p class="note">For WhatsApp, use the contact number shown on this page.</p>
-      <a class="btn btn-light" href="https://wa.me/923263658254" target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
-    </div>
-  </div>
+
+<div class="container contact-grid">
+
+
+<div>
+
+<span class="eyebrow">
+Let's Work Together
+</span>
+
+<h2>
+Have a video to edit?
+</h2>
+
+<p class="muted">
+Let's discuss your project.
+Contact KG Edits for video editing,
+audio cleanup, reels, shorts,
+YouTube videos, and social media content.
+</p>
+
+
+<div class="contact-list">
+
+<div class="contact-item">
+
+<strong>
+Phone / WhatsApp
+</strong>
+
+03263658254
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>
+Email
+</strong>
+
+kgeditsofficial642@gmail.com
+
+</div>
+
+</div>
+
+
+<div class="socials">
+
+<a
+class="social"
+href="https://www.facebook.com/profile.php?id=61595102123715"
+target="_blank"
+rel="noopener noreferrer"
+>
+Facebook ↗
+</a>
+
+
+<a
+class="social"
+href="https://www.tiktok.com/@kgedits04"
+target="_blank"
+rel="noopener noreferrer"
+>
+TikTok ↗
+</a>
+
+
+<a
+class="social"
+href="https://www.youtube.com/@KGEDITS-09"
+target="_blank"
+rel="noopener noreferrer"
+>
+YouTube ↗
+</a>
+
+</div>
+
+</div>
+
+
+<div class="contact-box">
+
+<h3>
+Ready to start your project?
+</h3>
+
+<p>
+Send me an email with your video idea,
+preferred style, deadline, and reference links.
+</p>
+
+
+<a
+class="btn btn-primary"
+href="mailto:kgeditsofficial642@gmail.com?subject=Video%20Editing%20Project"
+>
+Email Me About Your Project ↗
+</a>
+
+
+<p class="note">
+Or contact me directly through WhatsApp.
+</p>
+
+
+<a
+class="btn btn-light"
+href="https://wa.me/923263658254"
+target="_blank"
+rel="noopener noreferrer"
+>
+Message on WhatsApp
+</a>
+
+</div>
+
+</div>
+
 </section>
+
 </main>
 
+
+<!-- FOOTER -->
+
 <footer>
-  <div class="container footer-row">
-    <a class="logo" href="#home">KG <span>Edits.</span></a>
-    <small>© <span id="year"></span> KG Edits. All rights reserved.</small>
-    <small>Video Editing • Audio Editing • Creative Content</small>
-  </div>
+
+<div class="container footer-row">
+
+<a class="logo" href="#home">
+KG <span>Edits.</span>
+</a>
+
+<small>
+© <span id="year"></span> KG Edits.
+All rights reserved.
+</small>
+
+<small>
+Video Editing • Creative Design • AI
+</small>
+
+</div>
+
 </footer>
+
+
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
 </script>
+
 </body>
 </html>
+```
