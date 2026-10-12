@@ -669,79 +669,11 @@ h2{
 .about-grid{
     display:grid;
 
-    grid-template-columns:
-        .8fr 1.2fr;
+    grid-template-columns:1fr;
 
     gap:60px;
 
-    align-items:center;
-}
-
-.about-art.has-img{
-    position:relative;
-
-    overflow:hidden;
-
-    min-height:500px;
-
-    border-radius:12px;
-
-    background:#080a0e;
-
-    border:1px solid #303641;
-
-    box-shadow:var(--shadow);
-}
-
-.about-art.has-img img{
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-
-    position:absolute;
-
-    inset:0;
-}
-
-.about-art.has-img:after{
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-        linear-gradient(
-            transparent 45%,
-            rgba(0,0,0,.9)
-        );
-}
-
-.about-art.has-img .cap{
-    position:absolute;
-
-    left:0;
-    right:0;
-    bottom:0;
-
-    padding:50px 25px 24px;
-
-    z-index:2;
-}
-
-.about-art.has-img .cap strong{
-    color:#fff;
-
-    font-size:30px;
-
-    display:block;
-}
-
-.about-art.has-img .cap span{
-    color:#bfc4cc;
-
-    font-size:14px;
+    align-items:start;
 }
 
 .about-copy p{
@@ -1147,13 +1079,6 @@ footer a{
             repeat(2,1fr);
     }
 
-    .about-art.has-img{
-        min-height:420px;
-        max-width:500px;
-        width:100%;
-        margin:auto;
-    }
-
 }
 
 @media(max-width:600px){
@@ -1210,10 +1135,6 @@ footer a{
 
     .timeline-visual{
         height:65px;
-    }
-
-    .about-art.has-img{
-        min-height:380px;
     }
 
 }
@@ -1561,29 +1482,6 @@ products, services and social media campaigns.
 <div class="container about-grid">
 
 
-<div class="about-art has-img">
-
-<img
-src="images/kashif-about.jpg"
-alt="Muhammad Kashif Saleem, Founder of KG Edits"
-loading="lazy"
->
-
-<div class="cap">
-
-<strong>
-Ideas into Impact.
-</strong>
-
-<span>
-Thoughtful cuts. Strong visuals. Clean sound.
-</span>
-
-</div>
-
-</div>
-
-
 <div class="about-copy">
 
 <span class="eyebrow">
@@ -1682,7 +1580,6 @@ class="project-video"
 controls
 preload="metadata"
 playsinline
-poster="images/project1.jpg"
 aria-label="Play Auto Caption Tutorial"
 >
 
@@ -1719,7 +1616,6 @@ class="project-video"
 controls
 preload="metadata"
 playsinline
-poster="images/project2.jpg"
 aria-label="Play Color Grading in CapCut"
 >
 
@@ -1756,7 +1652,6 @@ class="project-video"
 controls
 preload="metadata"
 playsinline
-poster="images/project3.jpg"
 aria-label="Play Sound Design Essentials"
 >
 
@@ -1793,7 +1688,6 @@ class="project-video"
 controls
 preload="metadata"
 playsinline
-poster="images/project4.jpg"
 aria-label="Play Rare Transition Sound Effects"
 >
 
@@ -1830,7 +1724,6 @@ class="project-video"
 controls
 preload="metadata"
 playsinline
-poster="images/project5.jpg"
 aria-label="Play Minimalist Edit"
 >
 
@@ -1867,7 +1760,6 @@ class="project-video"
 controls
 preload="metadata"
 playsinline
-poster="images/project6.jpg"
 aria-label="Play Free Editor Resource"
 >
 
